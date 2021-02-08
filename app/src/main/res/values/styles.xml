@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DefaultStyleForTextView">
+        <item name="fontFamily">@font/roboto_mono</item>
+        <item name="android:textColor">@color/base_white</item>
+    </style>
+
+    <style name="DefaultStyleForBigTextView" parent="DefaultStyleForTextView">
+        <item name="android:textSize">@dimen/big_text_size</item>
+    </style>
+
+    <style name="DefaultStyleForMiddleTextView" parent="DefaultStyleForTextView">
+        <item name="android:textSize">@dimen/middle_text_size</item>
+    </style>
+
+</resources>

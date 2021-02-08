@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="middle_size_book">80dp</dimen>
+    <dimen name="big_text_size">38sp</dimen>
+    <dimen name="middle_text_size">26sp</dimen>
+</resources>
