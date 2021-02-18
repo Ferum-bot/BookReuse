@@ -15,4 +15,8 @@
 
         <item name="android:windowFullscreen">true</item>
     </style>
+
+    <style name="Theme.BookReuse.Launcher">
+        <item name="android:windowBackground">@drawable/launch_screen</item>
+    </style>
 </resources>

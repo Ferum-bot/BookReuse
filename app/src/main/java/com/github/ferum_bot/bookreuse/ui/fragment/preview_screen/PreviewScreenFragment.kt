@@ -2,9 +2,7 @@ package com.github.ferum_bot.bookreuse.ui.fragment.preview_screen
 
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.constraintlayout.motion.widget.MotionLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -13,7 +11,6 @@ import com.github.ferum_bot.bookreuse.databinding.FragmentPreviewScreenBinding
 import com.github.ferum_bot.bookreuse.ui.fragment.base.viewBinding
 import com.github.ferum_bot.bookreuse.viewmodels.preview_screen.PreviewScreenViewModel
 import com.github.ferum_bot.bookreuse.viewmodels.preview_screen.PreviewScreenViewModelFactory
-import kotlin.system.exitProcess
 
 /**
  * Created by Matvey Popov.
@@ -26,6 +23,10 @@ class PreviewScreenFragment: Fragment(R.layout.fragment_preview_screen) {
     private val binding by viewBinding { FragmentPreviewScreenBinding.bind(it) }
     private val viewModel by viewModels<PreviewScreenViewModel> { PreviewScreenViewModelFactory() }
 
+    /**
+     * Needed to start preview animation with some delay
+     * to look more beautiful
+     */
     private val timer = object: CountDownTimer(TIMER_START_DELAY, TIMER_COUNT_DOWN_INTERVAL) {
 
         override fun onTick(millisUntilFinished: Long) {
@@ -69,13 +70,13 @@ class PreviewScreenFragment: Fragment(R.layout.fragment_preview_screen) {
             }
 
             override fun onTransitionCompleted(p0: MotionLayout?, p1: Int) {
-               exitProcess(0)
+                //exitProcess(0)
             }
         })
     }
 
     private companion object {
-        private const val TIMER_START_DELAY = 500L
-        private const val TIMER_COUNT_DOWN_INTERVAL = 500L
+        private const val TIMER_START_DELAY = 600L
+        private const val TIMER_COUNT_DOWN_INTERVAL = 600L
     }
 }

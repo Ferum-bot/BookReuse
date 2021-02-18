@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BookReuse">
         <activity
-            android:name=".ui.application.MainActivity">
+            android:theme="@style/Theme.BookReuse.Launcher"
+            android:name=".ui.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
