@@ -5,12 +5,10 @@ import android.os.CountDownTimer
 import android.view.View
 import androidx.constraintlayout.motion.widget.MotionLayout
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import com.github.ferum_bot.bookreuse.R
 import com.github.ferum_bot.bookreuse.databinding.FragmentPreviewScreenBinding
-import com.github.ferum_bot.bookreuse.ui.fragment.base.viewBinding
-import com.github.ferum_bot.bookreuse.viewmodels.preview_screen.PreviewScreenViewModel
-import com.github.ferum_bot.bookreuse.viewmodels.preview_screen.PreviewScreenViewModelFactory
+import com.github.ferum_bot.bookreuse.ui.activity.LaunchActivity
+import com.github.ferum_bot.bookreuse.ui.fragment.delegates.viewBinding
 
 /**
  * Created by Matvey Popov.
@@ -21,7 +19,7 @@ import com.github.ferum_bot.bookreuse.viewmodels.preview_screen.PreviewScreenVie
 class PreviewScreenFragment: Fragment(R.layout.fragment_preview_screen) {
 
     private val binding by viewBinding { FragmentPreviewScreenBinding.bind(it) }
-    private val viewModel by viewModels<PreviewScreenViewModel> { PreviewScreenViewModelFactory() }
+    //private val viewModel by viewModels<PreviewScreenViewModel> { ViewModelFactory() }
 
     /**
      * Needed to start preview animation with some delay
@@ -70,7 +68,8 @@ class PreviewScreenFragment: Fragment(R.layout.fragment_preview_screen) {
             }
 
             override fun onTransitionCompleted(p0: MotionLayout?, p1: Int) {
-                //exitProcess(0)
+                val activity = requireActivity() as LaunchActivity
+                activity.splashScreenHasShown()
             }
         })
     }

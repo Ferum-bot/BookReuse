@@ -1,4 +1,4 @@
-package com.github.ferum_bot.bookreuse.ui.fragment.base
+package com.github.ferum_bot.bookreuse.ui.fragment.delegates
 
 import android.view.View
 import androidx.fragment.app.Fragment

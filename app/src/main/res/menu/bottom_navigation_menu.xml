@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home_page_screen"
+        android:enabled="true"
+        android:title="@string/home"
+        android:icon="@drawable/ic_home_24px"
+        />
+
+    <item
+        android:id="@+id/search_page_screen"
+        android:enabled="true"
+        android:title="@string/search"
+        android:icon="@drawable/ic_search_24px"
+        />
+
+    <item
+        android:id="@+id/add_new_record"
+        android:enabled="true"
+        android:title="@string/add"
+        android:icon="@drawable/ic_add_circle_24px"
+        />
+
+    <item
+        android:id="@+id/messages_page_screen"
+        android:enabled="true"
+        android:title="@string/messages"
+        android:icon="@drawable/ic_chat_24px"
+        />
+
+    <item
+        android:id="@+id/profile_page_screen"
+        android:enabled="true"
+        android:title="@string/profile"
+        android:icon="@drawable/ic_person_24px"
+        />
+</menu>

@@ -1,10 +1,9 @@
-package com.github.ferum_bot.bookreuse.ui.fragment.base
+package com.github.ferum_bot.bookreuse.ui.fragment.delegates
 
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
-import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.viewbinding.ViewBinding
 import kotlin.properties.ReadOnlyProperty

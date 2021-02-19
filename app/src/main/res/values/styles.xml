@@ -14,4 +14,13 @@
         <item name="android:textSize">@dimen/middle_text_size</item>
     </style>
 
+    <style name="BaseStyleForBottomNavigation" parent="@style/Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="itemIconSize">@dimen/icon_size_for_bottom_navigation</item>
+        <item name="labelVisibilityMode">unlabeled</item>
+        <item name="menu">@menu/bottom_navigation_menu</item>
+        <item name="itemIconTint">@color/base_white</item>
+        <item name="itemRippleColor">@color/base_yellow</item>
+        <item name="android:background">@drawable/background_for_bottom_navigation</item>
+    </style>
+    
 </resources>
