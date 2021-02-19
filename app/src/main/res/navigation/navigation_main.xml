@@ -7,4 +7,16 @@
         android:id="@+id/homeScreenFragment"
         android:name="com.github.ferum_bot.bookreuse.ui.fragment.home_screen.HomeScreenFragment"
         android:label="HomeScreenFragment" />
+    <fragment
+        android:id="@+id/messagesFragment"
+        android:name="com.github.ferum_bot.bookreuse.ui.fragment.messages.MessagesFragment"
+        android:label="MessagesFragment" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.github.ferum_bot.bookreuse.ui.fragment.search.SearchFragment"
+        android:label="SearchFragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.github.ferum_bot.bookreuse.ui.fragment.profile.ProfileFragment"
+        android:label="ProfileFragment" />
 </navigation>
