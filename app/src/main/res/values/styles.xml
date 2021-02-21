@@ -14,13 +14,22 @@
         <item name="android:textSize">@dimen/middle_text_size</item>
     </style>
 
-    <style name="BaseStyleForBottomNavigation" parent="@style/Widget.MaterialComponents.BottomNavigationView.Colored">
+    <style name="DefaultStyleForBottomNavigation" parent="@style/Widget.MaterialComponents.BottomNavigationView.Colored">
         <item name="itemIconSize">@dimen/icon_size_for_bottom_navigation</item>
         <item name="labelVisibilityMode">unlabeled</item>
         <item name="menu">@menu/bottom_navigation_menu</item>
         <item name="itemIconTint">@drawable/base_selector_for_bottom_navigation_items</item>
         <item name="itemRippleColor">@color/base_yellow</item>
         <item name="android:background">@color/light_black</item>
+        <item name="top_stoke_width">@dimen/stroke_width_for_bottom_navigation</item>
+        <item name="top_stroke_color">@android:color/white</item>
+    </style>
+
+    <style name="DefaultStyleForAddButton">
+        <item name="android:backgroundTint">@color/light_black</item>
+        <item name="android:background">@drawable/background_for_add_button</item>
+        <item name="android:elevation">7dp</item>
+        <item name="android:stateListAnimator">@null</item>
     </style>
     
 </resources>

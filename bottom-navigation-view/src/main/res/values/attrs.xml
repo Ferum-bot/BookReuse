@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BookReuseBottomNavigationView">
+        <attr name="top_stroke_color" format="color"/>
+        <attr name="top_stoke_width" format="dimension"/>
+    </declare-styleable>
+</resources>

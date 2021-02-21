@@ -25,6 +25,10 @@ class MainActivity: AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
+    /**
+     * Needed to track current screen
+     * in fragment container
+     */
     private var currentScreen = Screens.HOME
 
     override fun onCreate(savedInstanceState: Bundle?) {
