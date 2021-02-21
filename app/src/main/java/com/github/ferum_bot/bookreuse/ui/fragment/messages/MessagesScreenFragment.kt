@@ -11,7 +11,7 @@ import com.github.ferum_bot.bookreuse.ui.fragment.delegates.viewBinding
  * Time: 23:04
  * Project: BookReuse
  */
-class MessagesFragment: Fragment(R.layout.fragment_messages_screen) {
+class MessagesScreenFragment: Fragment(R.layout.fragment_messages_screen) {
 
     private val binding by viewBinding { FragmentMessagesScreenBinding.bind(it) }
 

@@ -6,17 +6,69 @@
     <fragment
         android:id="@+id/homeScreenFragment"
         android:name="com.github.ferum_bot.bookreuse.ui.fragment.home_screen.HomeScreenFragment"
-        android:label="HomeScreenFragment" />
+        android:label="HomeScreenFragment" >
+        <action
+            android:id="@+id/action_homeScreenFragment_to_searchFragment"
+            app:destination="@id/searchFragment"
+            app:launchSingleTop="true"/>
+        <action
+            android:id="@+id/action_homeScreenFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:launchSingleTop="true"/>
+        <action
+            android:id="@+id/action_homeScreenFragment_to_messagesFragment"
+            app:destination="@id/messagesFragment"
+            app:launchSingleTop="true"/>
+    </fragment>
     <fragment
         android:id="@+id/messagesFragment"
-        android:name="com.github.ferum_bot.bookreuse.ui.fragment.messages.MessagesFragment"
-        android:label="MessagesFragment" />
+        android:name="com.github.ferum_bot.bookreuse.ui.fragment.messages.MessagesScreenFragment"
+        android:label="MessagesFragment" >
+        <action
+            android:id="@+id/action_messagesFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:launchSingleTop="true"/>
+        <action
+            android:id="@+id/action_messagesFragment_to_searchFragment"
+            app:destination="@id/searchFragment"
+            app:launchSingleTop="true"/>
+        <action
+            android:id="@+id/action_messagesFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment"
+            app:launchSingleTop="true" />
+    </fragment>
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.github.ferum_bot.bookreuse.ui.fragment.search.SearchFragment"
-        android:label="SearchFragment" />
+        android:name="com.github.ferum_bot.bookreuse.ui.fragment.search.SearchScreenFragment"
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:launchSingleTop="true"/>
+        <action
+            android:id="@+id/action_searchFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment"
+            app:launchSingleTop="true"/>
+        <action
+            android:id="@+id/action_searchFragment_to_messagesFragment"
+            app:destination="@id/messagesFragment"
+            app:launchSingleTop="true"/>
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.github.ferum_bot.bookreuse.ui.fragment.profile.ProfileFragment"
-        android:label="ProfileFragment" />
+        android:name="com.github.ferum_bot.bookreuse.ui.fragment.profile.ProfileScreenFragment"
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_messagesFragment"
+            app:destination="@id/messagesFragment"
+            app:launchSingleTop="true"/>
+        <action
+            android:id="@+id/action_profileFragment_to_searchFragment"
+            app:destination="@id/searchFragment"
+            app:launchSingleTop="true"/>
+        <action
+            android:id="@+id/action_profileFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment"
+            app:launchSingleTop="true"/>
+    </fragment>
 </navigation>

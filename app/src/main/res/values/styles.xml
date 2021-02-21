@@ -20,7 +20,7 @@
         <item name="menu">@menu/bottom_navigation_menu</item>
         <item name="itemIconTint">@drawable/base_selector_for_bottom_navigation_items</item>
         <item name="itemRippleColor">@color/base_yellow</item>
-        <item name="android:background">@drawable/background_for_bottom_navigation</item>
+        <item name="android:background">@color/light_black</item>
     </style>
     
 </resources>

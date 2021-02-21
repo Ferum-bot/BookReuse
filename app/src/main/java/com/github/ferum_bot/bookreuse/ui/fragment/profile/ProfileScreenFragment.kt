@@ -11,7 +11,7 @@ import com.github.ferum_bot.bookreuse.ui.fragment.delegates.viewBinding
  * Time: 23:05
  * Project: BookReuse
  */
-class ProfileFragment: Fragment(R.layout.fragment_profile_screen) {
+class ProfileScreenFragment: Fragment(R.layout.fragment_profile_screen) {
 
     private val binding by viewBinding { FragmentProfileScreenBinding.bind(it) }
 
