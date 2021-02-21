@@ -10,15 +10,21 @@
         <action
             android:id="@+id/action_homeScreenFragment_to_searchFragment"
             app:destination="@id/searchFragment"
-            app:launchSingleTop="true"/>
+            app:launchSingleTop="true"
+            app:enterAnim="@anim/slide_left_enter_anim"
+            app:exitAnim="@anim/slide_left_exit_anim" />
         <action
             android:id="@+id/action_homeScreenFragment_to_profileFragment"
             app:destination="@id/profileFragment"
-            app:launchSingleTop="true"/>
+            app:launchSingleTop="true"
+            app:enterAnim="@anim/slide_left_enter_anim"
+            app:exitAnim="@anim/slide_left_exit_anim"/>
         <action
             android:id="@+id/action_homeScreenFragment_to_messagesFragment"
             app:destination="@id/messagesFragment"
-            app:launchSingleTop="true"/>
+            app:launchSingleTop="true"
+            app:enterAnim="@anim/slide_left_enter_anim"
+            app:exitAnim="@anim/slide_left_exit_anim"/>
     </fragment>
     <fragment
         android:id="@+id/messagesFragment"
@@ -27,15 +33,21 @@
         <action
             android:id="@+id/action_messagesFragment_to_profileFragment"
             app:destination="@id/profileFragment"
-            app:launchSingleTop="true"/>
+            app:launchSingleTop="true"
+            app:enterAnim="@anim/slide_left_enter_anim"
+            app:exitAnim="@anim/slide_left_exit_anim"/>
         <action
             android:id="@+id/action_messagesFragment_to_searchFragment"
             app:destination="@id/searchFragment"
-            app:launchSingleTop="true"/>
+            app:launchSingleTop="true"
+            app:enterAnim="@anim/slide_right_enter_anim"
+            app:exitAnim="@anim/slide_right_exit_anim"/>
         <action
             android:id="@+id/action_messagesFragment_to_homeScreenFragment"
             app:destination="@id/homeScreenFragment"
-            app:launchSingleTop="true" />
+            app:launchSingleTop="true"
+            app:enterAnim="@anim/slide_right_enter_anim"
+            app:exitAnim="@anim/slide_right_exit_anim"/>
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
@@ -44,15 +56,21 @@
         <action
             android:id="@+id/action_searchFragment_to_profileFragment"
             app:destination="@id/profileFragment"
-            app:launchSingleTop="true"/>
+            app:launchSingleTop="true"
+            app:enterAnim="@anim/slide_left_enter_anim"
+            app:exitAnim="@anim/slide_left_exit_anim"/>
         <action
             android:id="@+id/action_searchFragment_to_homeScreenFragment"
             app:destination="@id/homeScreenFragment"
-            app:launchSingleTop="true"/>
+            app:launchSingleTop="true"
+            app:enterAnim="@anim/slide_right_enter_anim"
+            app:exitAnim="@anim/slide_right_exit_anim"/>
         <action
             android:id="@+id/action_searchFragment_to_messagesFragment"
             app:destination="@id/messagesFragment"
-            app:launchSingleTop="true"/>
+            app:launchSingleTop="true"
+            app:enterAnim="@anim/slide_left_enter_anim"
+            app:exitAnim="@anim/slide_left_exit_anim"/>
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -61,14 +79,20 @@
         <action
             android:id="@+id/action_profileFragment_to_messagesFragment"
             app:destination="@id/messagesFragment"
-            app:launchSingleTop="true"/>
+            app:launchSingleTop="true"
+            app:enterAnim="@anim/slide_right_enter_anim"
+            app:exitAnim="@anim/slide_right_exit_anim"/>
         <action
             android:id="@+id/action_profileFragment_to_searchFragment"
             app:destination="@id/searchFragment"
-            app:launchSingleTop="true"/>
+            app:launchSingleTop="true"
+            app:enterAnim="@anim/slide_right_enter_anim"
+            app:exitAnim="@anim/slide_right_exit_anim"/>
         <action
             android:id="@+id/action_profileFragment_to_homeScreenFragment"
             app:destination="@id/homeScreenFragment"
-            app:launchSingleTop="true"/>
+            app:launchSingleTop="true"
+            app:enterAnim="@anim/slide_right_enter_anim"
+            app:exitAnim="@anim/slide_right_exit_anim"/>
     </fragment>
 </navigation>
