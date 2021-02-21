@@ -19,7 +19,7 @@
         <item name="labelVisibilityMode">unlabeled</item>
         <item name="menu">@menu/bottom_navigation_menu</item>
         <item name="itemIconTint">@drawable/base_selector_for_bottom_navigation_items</item>
-        <item name="itemRippleColor">@color/base_yellow</item>
+        <item name="itemRippleColor">@color/base_gray</item>
         <item name="android:background">@color/light_black</item>
         <item name="top_stoke_width">@dimen/stroke_width_for_bottom_navigation</item>
         <item name="top_stroke_color">@android:color/white</item>

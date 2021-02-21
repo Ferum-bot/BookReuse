@@ -14,4 +14,5 @@
     <color name="base_white">#FFFFFF</color>
     <color name="base_orange">#CE6921</color>
     <color name="base_yellow">#FFD555</color>
+    <color name="base_gray">#888888</color>
 </resources>
