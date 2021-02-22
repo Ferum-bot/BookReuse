@@ -3,6 +3,11 @@
     <dimen name="middle_size_book">80dp</dimen>
     <dimen name="big_text_size">38sp</dimen>
     <dimen name="middle_text_size">26sp</dimen>
+    <dimen name="less_middle_text_size">24sp</dimen>
     <dimen name="icon_size_for_bottom_navigation">30dp</dimen>
     <dimen name="stroke_width_for_bottom_navigation">1dp</dimen>
+    <dimen name="text_size_for_big_buttons">22sp</dimen>
+    <dimen name="big_button_round_corners">20dp</dimen>
+    <dimen name="padding_vertical_for_big_buttons">8dp</dimen>
+    <dimen name="padding_horizontal_for_big_buttons">16dp</dimen>
 </resources>
