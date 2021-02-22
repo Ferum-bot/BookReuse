@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/messagesFragment"
-        android:name="com.github.ferum_bot.bookreuse.ui.fragment.messages.LogOutMessagesScreenFragment"
+        android:name="com.github.ferum_bot.bookreuse.ui.fragment.messages.AnonimusUserMessagesScreenFragment"
         android:label="MessagesFragment" >
         <action
             android:id="@+id/action_messagesFragment_to_profileFragment"
@@ -74,7 +74,7 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.github.ferum_bot.bookreuse.ui.fragment.profile.ProfileScreenFragment"
+        android:name="com.github.ferum_bot.bookreuse.ui.fragment.profile.AnonimusUserProfileScreenFragment"
         android:label="ProfileFragment" >
         <action
             android:id="@+id/action_profileFragment_to_messagesFragment"

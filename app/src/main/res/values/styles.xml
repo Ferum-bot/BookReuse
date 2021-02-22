@@ -39,7 +39,7 @@
     </style>
 
     <style name="DefaultStyleForToolBar">
-        <item name="android:background">@color/light_black</item>
+        <item name="android:background">@drawable/ic_background_for_tool_bar</item>
         <item name="android:fitsSystemWindows">true</item>
         <item name="android:textColor">@color/base_white</item>
         <item name="bottom_stoke_width">@dimen/stroke_width_for_bottom_navigation</item>

@@ -12,4 +12,6 @@
     <string name="add_button">Add button</string>
     <string name="you_are_not_authorization">Вы не авторизованы</string>
     <string name="log_in">Авторизоваться</string>
+    <string name="anonimus_user">Анонимный пользователь</string>
+    <string name="enter_or_registration">Вход или регистрация</string>
 </resources>

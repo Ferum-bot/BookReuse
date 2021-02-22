@@ -1,6 +1,7 @@
 package com.github.ferum_bot.bookreuse.application
 
 import android.app.Application
+import timber.log.Timber
 
 /**
  * Created by Matvey Popov.
@@ -17,6 +18,6 @@ class MainApplication: Application() {
     }
 
     private fun setUpTimber() {
-
+        Timber.plant(Timber.DebugTree())
     }
 }

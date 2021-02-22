@@ -25,7 +25,6 @@
             android:clearTaskOnLaunch="true"
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
-
         </activity>
     </application>
 

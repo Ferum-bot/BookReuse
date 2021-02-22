@@ -12,7 +12,7 @@ import com.github.ferum_bot.bookreuse.ui.fragment.delegates.viewBinding
  * Time: 20:29
  * Project: BookReuse
  */
-class LogOutMessagesScreenFragment: Fragment(R.layout.fragment_not_authorization_messages_screen) {
+class AnonimusUserMessagesScreenFragment: Fragment(R.layout.fragment_not_authorization_messages_screen) {
 
     private val binding by viewBinding { FragmentNotAuthorizationMessagesScreenBinding.bind(it) }
 

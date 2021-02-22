@@ -12,4 +12,4 @@ package com.github.ferum_bot.bottom_navigation_view.core.extensions
  * stroke line in dp is too big
  */
 internal fun Float.refactorToBookReuseWidth() =
-    this / 5.0f
+    this / 2.0f
