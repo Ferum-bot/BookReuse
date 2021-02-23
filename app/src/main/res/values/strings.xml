@@ -14,4 +14,7 @@
     <string name="log_in">Авторизоваться</string>
     <string name="anonimus_user">Анонимный пользователь</string>
     <string name="enter_or_registration">Вход или регистрация</string>
+    <string name="create">Создать</string>
+    <string name="announcement">Объявление</string>
+    <string name="review">Рецензия</string>
 </resources>

@@ -14,6 +14,11 @@
         <item name="android:textSize">@dimen/middle_text_size</item>
     </style>
 
+    <style name="DefaultStyleForBottomSheetTextViews" parent="DefaultStyleForMiddleTextView">
+        <item name="android:textSize">@dimen/bottom_sheet_text_size</item>
+        <item name="android:layout_marginStart">16dp</item>
+    </style>
+
     <style name="DefaultStyleForNotAuthorizationTextView" parent="DefaultStyleForMiddleTextView">
         <item name="android:textColor">@color/base_orange</item>
         <item name="android:letterSpacing">0.01</item>
@@ -59,4 +64,12 @@
         <item name="android:paddingBottom">@dimen/padding_vertical_for_big_buttons</item>
     </style>
 
+    <style name="BottomSheetDialogTheme" parent="Theme.Design.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+    </style>
+
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    
 </resources>

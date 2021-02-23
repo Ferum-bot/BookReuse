@@ -2,7 +2,9 @@ package com.github.ferum_bot.bookreuse.ui.activity
 
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.forEach
 import androidx.core.view.get
@@ -14,6 +16,8 @@ import androidx.navigation.ui.setupWithNavController
 import com.github.ferum_bot.bookreuse.R
 import com.github.ferum_bot.bookreuse.databinding.ActivityMainBinding
 import com.github.ferum_bot.bookreuse.ui.fragment.home_screen.HomeScreenFragment
+import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 /**
  * Created by Matvey Popov.
@@ -25,6 +29,8 @@ class MainActivity: AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
+    private lateinit var createStuffBottomSheetBehavior: BottomSheetBehavior<ConstraintLayout>
+
     /**
      * Needed to track current screen
      * in fragment container
@@ -35,11 +41,14 @@ class MainActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         initViewBinding()
         setContentView(binding.root)
+        setUpAllViews()
     }
 
     override fun onStart() {
         super.onStart()
         setUpBottomNavigation()
+        configureBottomSheet()
+        setAllClickListeners()
     }
 
     override fun onBackPressed() {
@@ -48,6 +57,11 @@ class MainActivity: AppCompatActivity() {
 
     private fun initViewBinding() {
         binding = ActivityMainBinding.inflate(layoutInflater)
+    }
+
+    private fun setUpAllViews() {
+        val bottomSheet = findViewById<ConstraintLayout>(R.id.add_button_bottom_sheet)
+        createStuffBottomSheetBehavior = BottomSheetBehavior.from(bottomSheet)
     }
 
     private fun setUpBottomNavigation() {
@@ -144,6 +158,37 @@ class MainActivity: AppCompatActivity() {
             }
         }
         currentScreen = Screens.HOME
+    }
+
+    private fun configureBottomSheet() {
+        createStuffBottomSheetBehavior.state = BottomSheetBehavior.STATE_HIDDEN
+        createStuffBottomSheetBehavior.skipCollapsed = true
+
+        createStuffBottomSheetBehavior.addBottomSheetCallback(object: BottomSheetBehavior.BottomSheetCallback() {
+
+            override fun onStateChanged(bottomSheet: View, newState: Int) {
+                when(newState) {
+                    BottomSheetBehavior.STATE_EXPANDED -> {
+                        binding.bottomNavigation.visibility = View.GONE
+                    }
+                    BottomSheetBehavior.STATE_HIDDEN -> {
+                        binding.bottomNavigation.visibility = View.VISIBLE
+                    }
+                }
+            }
+
+            override fun onSlide(bottomSheet: View, slideOffset: Float) {
+
+            }
+
+        })
+    }
+
+    private fun setAllClickListeners() {
+        binding.addButton.setOnClickListener {
+            binding.bottomNavigation.visibility = View.GONE
+            createStuffBottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
+        }
     }
 
     companion object {
