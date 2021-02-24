@@ -4,6 +4,7 @@
     <style name="DefaultStyleForTextView">
         <item name="fontFamily">@font/roboto_mono</item>
         <item name="android:textColor">@color/base_white</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline5</item>
     </style>
 
     <style name="DefaultStyleForBigTextView" parent="DefaultStyleForTextView">
@@ -12,6 +13,10 @@
 
     <style name="DefaultStyleForMiddleTextView" parent="DefaultStyleForTextView">
         <item name="android:textSize">@dimen/middle_text_size</item>
+    </style>
+
+    <style name="DefaultStyleForSmallTextView" parent="DefaultStyleForTextView">
+        <item name="android:textSize">@dimen/small_text_size</item>
     </style>
 
     <style name="DefaultStyleForBottomSheetTextViews" parent="DefaultStyleForMiddleTextView">

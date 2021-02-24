@@ -1,23 +1,17 @@
 package com.github.ferum_bot.bookreuse.ui.activity
 
 import android.os.Bundle
-import android.view.MenuItem
 import android.view.View
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.content.ContextCompat
-import androidx.core.view.forEach
-import androidx.core.view.get
-import androidx.core.view.iterator
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.github.ferum_bot.bookreuse.R
 import com.github.ferum_bot.bookreuse.databinding.ActivityMainBinding
-import com.github.ferum_bot.bookreuse.ui.fragment.home_screen.HomeScreenFragment
 import com.google.android.material.bottomsheet.BottomSheetBehavior
-import com.google.android.material.bottomsheet.BottomSheetDialog
 
 /**
  * Created by Matvey Popov.
@@ -170,13 +164,18 @@ class MainActivity: AppCompatActivity() {
                 when(newState) {
                     BottomSheetBehavior.STATE_EXPANDED -> {
                         binding.bottomNavigation.visibility = View.GONE
+                        setClickListenerForBackground()
                     }
                     BottomSheetBehavior.STATE_HIDDEN -> {
                         binding.bottomNavigation.visibility = View.VISIBLE
+                        removeClickListenerFromBackground()
                     }
                 }
             }
 
+            /**
+             * May be add some animation lately
+             */
             override fun onSlide(bottomSheet: View, slideOffset: Float) {
 
             }
@@ -184,10 +183,53 @@ class MainActivity: AppCompatActivity() {
         })
     }
 
+    private fun setClickListenerForBackground() {
+        binding.background.isClickable = true
+        binding.navHostFragment.isClickable = false
+        binding.background.setOnClickListener {
+            createStuffBottomSheetBehavior.state = BottomSheetBehavior.STATE_HIDDEN
+        }
+    }
+
+    private fun removeClickListenerFromBackground() {
+        binding.background.isClickable = false
+        binding.navHostFragment.isClickable = true
+        binding.background.setOnClickListener(null)
+    }
+
     private fun setAllClickListeners() {
         binding.addButton.setOnClickListener {
             binding.bottomNavigation.visibility = View.GONE
             createStuffBottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
+        }
+
+        val announcementTextView = findViewById<TextView>(R.id.announcement_text_view)
+        val announcementImage = findViewById<ImageView>(R.id.announcement_image)
+        announcementTextView.setOnClickListener {
+            clickListenerForCreateStuffButtons(TypesOfStuff.ANNOUNCEMENT)
+        }
+        announcementImage.setOnClickListener {
+            clickListenerForCreateStuffButtons(TypesOfStuff.ANNOUNCEMENT)
+        }
+
+        val reviewTextView = findViewById<TextView>(R.id.review_text_view)
+        val reviewImage = findViewById<ImageView>(R.id.review_image)
+        reviewTextView.setOnClickListener {
+            clickListenerForCreateStuffButtons(TypesOfStuff.REVIEW)
+        }
+        reviewImage.setOnClickListener {
+            clickListenerForCreateStuffButtons(TypesOfStuff.REVIEW)
+        }
+    }
+
+    private fun clickListenerForCreateStuffButtons(type: TypesOfStuff) {
+        when(type) {
+            TypesOfStuff.ANNOUNCEMENT -> {
+                //TODO("Navigate to announcement creating screen")
+            }
+            TypesOfStuff.REVIEW -> {
+                //TODO("Navigate to review creating screen")
+            }
         }
     }
 
@@ -201,5 +243,9 @@ class MainActivity: AppCompatActivity() {
 
     private enum class Screens{
         HOME, SEARCH, MESSAGES, PROFILE
+    }
+
+    private enum class TypesOfStuff {
+        REVIEW, ANNOUNCEMENT
     }
 }
