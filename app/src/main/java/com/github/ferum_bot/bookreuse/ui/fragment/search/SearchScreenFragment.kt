@@ -2,7 +2,7 @@ package com.github.ferum_bot.bookreuse.ui.fragment.search
 
 import androidx.fragment.app.Fragment
 import com.github.ferum_bot.bookreuse.R
-import com.github.ferum_bot.bookreuse.databinding.FragmentSearchScreenBinding
+import com.github.ferum_bot.bookreuse.databinding.FragmentSearchScreenContainerBinding
 import com.github.ferum_bot.bookreuse.ui.fragment.delegates.viewBinding
 
 /**
@@ -11,8 +11,8 @@ import com.github.ferum_bot.bookreuse.ui.fragment.delegates.viewBinding
  * Time: 23:05
  * Project: BookReuse
  */
-class SearchScreenFragment: Fragment(R.layout.fragment_search_screen) {
+class SearchScreenFragment: Fragment(R.layout.fragment_search_screen_container) {
 
-    private val binding by viewBinding { FragmentSearchScreenBinding.bind(it) }
+    private val binding by viewBinding { FragmentSearchScreenContainerBinding.bind(it) }
 
 }

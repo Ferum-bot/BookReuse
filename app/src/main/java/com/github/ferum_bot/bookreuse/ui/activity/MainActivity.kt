@@ -1,5 +1,6 @@
 package com.github.ferum_bot.bookreuse.ui.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
@@ -159,17 +160,27 @@ class MainActivity: AppCompatActivity() {
     }
 
     private fun clickListenerForCreateStuffButtons(type: TypesOfStuff) {
+        startCreatingNewStuffActivity(type)
+    }
+
+    private fun startCreatingNewStuffActivity(type: TypesOfStuff) {
+        val intent = Intent(this, CreatingNewStuffActivity::class.java)
         when(type) {
-            TypesOfStuff.ANNOUNCEMENT -> {
-                //TODO("Navigate to announcement creating screen")
-            }
             TypesOfStuff.REVIEW -> {
-                //TODO("Navigate to review creating screen")
+                intent.putExtra(STUFF_TYPE, TypesOfStuff.REVIEW.name)
+            }
+            TypesOfStuff.ANNOUNCEMENT -> {
+                intent.putExtra(STUFF_TYPE, TypesOfStuff.ANNOUNCEMENT.name)
             }
         }
+        startActivity(intent)
     }
 
     private enum class TypesOfStuff {
         REVIEW, ANNOUNCEMENT
+    }
+
+    companion object {
+        private const val STUFF_TYPE = "stuff_type"
     }
 }

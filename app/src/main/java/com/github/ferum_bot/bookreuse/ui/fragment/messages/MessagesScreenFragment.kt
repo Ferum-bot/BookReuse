@@ -2,7 +2,7 @@ package com.github.ferum_bot.bookreuse.ui.fragment.messages
 
 import androidx.fragment.app.Fragment
 import com.github.ferum_bot.bookreuse.R
-import com.github.ferum_bot.bookreuse.databinding.FragmentMessagesScreenBinding
+import com.github.ferum_bot.bookreuse.databinding.FragmentMessagesScreenContainerBinding
 import com.github.ferum_bot.bookreuse.ui.fragment.delegates.viewBinding
 
 /**
@@ -11,8 +11,8 @@ import com.github.ferum_bot.bookreuse.ui.fragment.delegates.viewBinding
  * Time: 23:04
  * Project: BookReuse
  */
-class MessagesScreenFragment: Fragment(R.layout.fragment_messages_screen) {
+class MessagesScreenFragment: Fragment(R.layout.fragment_messages_screen_container) {
 
-    private val binding by viewBinding { FragmentMessagesScreenBinding.bind(it) }
+    private val binding by viewBinding { FragmentMessagesScreenContainerBinding.bind(it) }
 
 }

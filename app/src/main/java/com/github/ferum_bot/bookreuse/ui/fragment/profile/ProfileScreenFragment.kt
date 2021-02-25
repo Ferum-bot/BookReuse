@@ -2,7 +2,7 @@ package com.github.ferum_bot.bookreuse.ui.fragment.profile
 
 import androidx.fragment.app.Fragment
 import com.github.ferum_bot.bookreuse.R
-import com.github.ferum_bot.bookreuse.databinding.FragmentProfileScreenBinding
+import com.github.ferum_bot.bookreuse.databinding.FragmentProfileScreenContainerBinding
 import com.github.ferum_bot.bookreuse.ui.fragment.delegates.viewBinding
 
 /**
@@ -11,8 +11,8 @@ import com.github.ferum_bot.bookreuse.ui.fragment.delegates.viewBinding
  * Time: 23:05
  * Project: BookReuse
  */
-class ProfileScreenFragment: Fragment(R.layout.fragment_profile_screen) {
+class ProfileScreenFragment: Fragment(R.layout.fragment_profile_screen_container) {
 
-    private val binding by viewBinding { FragmentProfileScreenBinding.bind(it) }
+    private val binding by viewBinding { FragmentProfileScreenContainerBinding.bind(it) }
 
 }

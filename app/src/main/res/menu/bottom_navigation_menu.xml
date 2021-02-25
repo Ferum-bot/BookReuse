@@ -20,6 +20,7 @@
         android:id="@+id/add_placeholder"
         android:title="@string/placeholder"
         android:visible="true"
+        android:enabled="false"
         />
 
     <item
