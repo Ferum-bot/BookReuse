@@ -46,6 +46,7 @@
         <item name="android:background">@drawable/background_for_add_button</item>
         <item name="android:elevation">7dp</item>
         <item name="android:stateListAnimator">@null</item>
+        <item name="android:layout_gravity">center</item>
     </style>
 
     <style name="DefaultStyleForToolBar">
@@ -76,5 +77,14 @@
     <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
         <item name="android:background">@android:color/transparent</item>
     </style>
-    
+
+    <style name="DefaultStyleForBottomAppBar">
+        <item name="contentInsetEnd">0dp</item>
+        <item name="contentInsetStart">0dp</item>
+        <item name="contentInsetLeft">0dp</item>
+        <item name="contentInsetRight">0dp</item>
+        <item name="android:layout_gravity">bottom</item>
+        <item name="layout_behavior">com.google.android.material.bottomappbar.BottomAppBar$Behavior</item>
+    </style>
+
 </resources>

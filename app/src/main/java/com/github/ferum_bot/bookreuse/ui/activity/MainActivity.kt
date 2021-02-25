@@ -9,6 +9,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
+import androidx.viewpager2.widget.ViewPager2
 import com.github.ferum_bot.bookreuse.R
 import com.github.ferum_bot.bookreuse.databinding.ActivityMainBinding
 import com.google.android.material.bottomsheet.BottomSheetBehavior
@@ -25,11 +26,7 @@ class MainActivity: AppCompatActivity() {
 
     private lateinit var createStuffBottomSheetBehavior: BottomSheetBehavior<ConstraintLayout>
 
-    /**
-     * Needed to track current screen
-     * in fragment container
-     */
-    private var currentScreen = Screens.HOME
+    private lateinit var viewPager: ViewPager2
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,8 +37,8 @@ class MainActivity: AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        setUpBottomNavigation()
         configureBottomSheet()
+        setNavigationListenersToBottomNavigation()
         setAllClickListeners()
     }
 
@@ -54,104 +51,20 @@ class MainActivity: AppCompatActivity() {
     }
 
     private fun setUpAllViews() {
+        setUpBottomSheet()
+        setUpViewPager()
+    }
+
+    private fun setUpBottomSheet() {
         val bottomSheet = findViewById<ConstraintLayout>(R.id.add_button_bottom_sheet)
         createStuffBottomSheetBehavior = BottomSheetBehavior.from(bottomSheet)
     }
 
-    private fun setUpBottomNavigation() {
-        configureBottomNavigationOptions()
-
-        binding.bottomNavigation.setOnNavigationItemSelectedListener { menuItem ->
-            val navController = findNavController(binding.navHostFragment.id)
-            when(menuItem.itemId) {
-                R.id.search_page_screen -> {
-                    navigateToSearchScreen(navController)
-                    true
-                }
-                R.id.profile_page_screen -> {
-                    navigateToProfileScreen(navController)
-                    true
-                }
-                R.id.messages_page_screen -> {
-                    navigateToMessagesScreen(navController)
-                    true
-                }
-                R.id.home_page_screen -> {
-                    navigateToHomeScreen(navController)
-                    true
-                }
-                else -> {
-                    false
-                }
-            }
-        }
-    }
-
-    private fun configureBottomNavigationOptions() {
-        val bottomNav = binding.bottomNavigation
-        val navController = findNavController(binding.navHostFragment.id)
-        bottomNav.menu.getItem(POSITION_OF_ADD_ITEM).isEnabled = false
-        bottomNav.setupWithNavController(navController)
-    }
-
-    private fun navigateToSearchScreen(navController: NavController) {
-        when(currentScreen) {
-            Screens.HOME -> {
-                navController.navigate(R.id.action_homeScreenFragment_to_searchFragment)
-            }
-            Screens.MESSAGES -> {
-                navController.navigate(R.id.action_messagesFragment_to_searchFragment)
-            }
-            Screens.PROFILE -> {
-                navController.navigate(R.id.action_profileFragment_to_searchFragment)
-            }
-        }
-        currentScreen = Screens.SEARCH
-    }
-
-    private fun navigateToProfileScreen(navController: NavController) {
-        when(currentScreen) {
-            Screens.HOME -> {
-                navController.navigate(R.id.action_homeScreenFragment_to_profileFragment)
-            }
-            Screens.MESSAGES -> {
-                navController.navigate(R.id.action_messagesFragment_to_profileFragment)
-            }
-            Screens.SEARCH -> {
-                navController.navigate(R.id.action_searchFragment_to_profileFragment)
-            }
-        }
-        currentScreen = Screens.PROFILE
-    }
-
-    private fun navigateToMessagesScreen(navController: NavController) {
-        when(currentScreen) {
-            Screens.HOME -> {
-                navController.navigate(R.id.action_homeScreenFragment_to_messagesFragment)
-            }
-            Screens.SEARCH -> {
-                navController.navigate(R.id.action_searchFragment_to_messagesFragment)
-            }
-            Screens.PROFILE -> {
-                navController.navigate(R.id.action_profileFragment_to_messagesFragment)
-            }
-        }
-        currentScreen = Screens.MESSAGES
-    }
-
-    private fun navigateToHomeScreen(navController: NavController) {
-        when(currentScreen) {
-            Screens.SEARCH -> {
-                navController.navigate(R.id.action_searchFragment_to_homeScreenFragment)
-            }
-            Screens.MESSAGES -> {
-                navController.navigate(R.id.action_messagesFragment_to_homeScreenFragment)
-            }
-            Screens.PROFILE -> {
-                navController.navigate(R.id.action_profileFragment_to_homeScreenFragment)
-            }
-        }
-        currentScreen = Screens.HOME
+    private fun setUpViewPager() {
+        val viewPagerAdapter = MainScreenPagerAdapter(this)
+        viewPager = findViewById(R.id.main_screen_view_pager)
+        viewPager.isUserInputEnabled = false
+        viewPager.adapter = viewPagerAdapter
     }
 
     private fun configureBottomSheet() {
@@ -163,11 +76,10 @@ class MainActivity: AppCompatActivity() {
             override fun onStateChanged(bottomSheet: View, newState: Int) {
                 when(newState) {
                     BottomSheetBehavior.STATE_EXPANDED -> {
-                        binding.bottomNavigation.visibility = View.GONE
                         setClickListenerForBackground()
                     }
                     BottomSheetBehavior.STATE_HIDDEN -> {
-                        binding.bottomNavigation.visibility = View.VISIBLE
+                        binding.bottomAppBar.visibility = View.VISIBLE
                         removeClickListenerFromBackground()
                     }
                 }
@@ -177,7 +89,7 @@ class MainActivity: AppCompatActivity() {
              * May be add some animation lately
              */
             override fun onSlide(bottomSheet: View, slideOffset: Float) {
-
+                binding.background.alpha = slideOffset
             }
 
         })
@@ -185,7 +97,6 @@ class MainActivity: AppCompatActivity() {
 
     private fun setClickListenerForBackground() {
         binding.background.isClickable = true
-        binding.navHostFragment.isClickable = false
         binding.background.setOnClickListener {
             createStuffBottomSheetBehavior.state = BottomSheetBehavior.STATE_HIDDEN
         }
@@ -193,13 +104,12 @@ class MainActivity: AppCompatActivity() {
 
     private fun removeClickListenerFromBackground() {
         binding.background.isClickable = false
-        binding.navHostFragment.isClickable = true
         binding.background.setOnClickListener(null)
     }
 
     private fun setAllClickListeners() {
-        binding.addButton.setOnClickListener {
-            binding.bottomNavigation.visibility = View.GONE
+        binding.addStuffButton.setOnClickListener {
+            binding.bottomAppBar.visibility = View.GONE
             createStuffBottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
         }
 
@@ -222,6 +132,32 @@ class MainActivity: AppCompatActivity() {
         }
     }
 
+    private fun setNavigationListenersToBottomNavigation() {
+        binding.bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+            when(item.itemId) {
+                R.id.profile_page_screen -> {
+                    viewPager.currentItem = MainScreenPagerAdapter.POSITION_OF_PROFILE_FRAGMENT
+                    true
+                }
+                R.id.home_page_screen -> {
+                    viewPager.currentItem = MainScreenPagerAdapter.POSITION_OF_HOME_FRAGMENT
+                    true
+                }
+                R.id.messages_page_screen -> {
+                    viewPager.currentItem = MainScreenPagerAdapter.POSITION_OF_MESSAGES_FRAGMENT
+                    true
+                }
+                R.id.search_page_screen -> {
+                    viewPager.currentItem = MainScreenPagerAdapter.POSITION_OF_SEARCH_FRAGMENT
+                    true
+                }
+                else -> {
+                    false
+                }
+            }
+        }
+    }
+
     private fun clickListenerForCreateStuffButtons(type: TypesOfStuff) {
         when(type) {
             TypesOfStuff.ANNOUNCEMENT -> {
@@ -231,18 +167,6 @@ class MainActivity: AppCompatActivity() {
                 //TODO("Navigate to review creating screen")
             }
         }
-    }
-
-    companion object {
-        private const val POSITION_OF_HOME_ITEM = 0
-        private const val POSITION_OF_SEARCH_ITEM = 1
-        private const val POSITION_OF_ADD_ITEM = 2
-        private const val POSITION_OF_MESSAGES_ITEM = 3
-        private const val POSITION_OF_PROFILE_ITEM = 4
-    }
-
-    private enum class Screens{
-        HOME, SEARCH, MESSAGES, PROFILE
     }
 
     private enum class TypesOfStuff {

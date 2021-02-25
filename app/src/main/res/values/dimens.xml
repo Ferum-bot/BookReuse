@@ -14,4 +14,5 @@
     <dimen name="padding_vertical_for_big_buttons">8dp</dimen>
     <dimen name="padding_horizontal_for_big_buttons">16dp</dimen>
     <dimen name="size_of_authorization_animals">160dp</dimen>
+    <dimen name="add_stuff_button_size">43dp</dimen>
 </resources>
