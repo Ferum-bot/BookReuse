@@ -7,12 +7,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.children
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.github.ferum_bot.bookreuse.R
 import com.github.ferum_bot.bookreuse.databinding.ActivityMainBinding
+import com.github.ferum_bot.bookreuse.ui.interfaces.AuthorizationUtil
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 
 /**
@@ -21,7 +23,7 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
  * Time: 21:13
  * Project: BookReuse
  */
-class MainActivity: AppCompatActivity() {
+class MainActivity: AppCompatActivity(), AuthorizationUtil {
 
     private lateinit var binding: ActivityMainBinding
 
@@ -43,6 +45,10 @@ class MainActivity: AppCompatActivity() {
         setAllClickListeners()
     }
 
+    override fun isUserAuthorized(): Boolean {
+        return false
+    }
+
     override fun onBackPressed() {
         finish()
     }
@@ -62,8 +68,8 @@ class MainActivity: AppCompatActivity() {
     }
 
     private fun setUpViewPager() {
-        val viewPagerAdapter = MainScreenPagerAdapter(this)
-        viewPager = findViewById(R.id.main_screen_view_pager)
+        val viewPagerAdapter = MainScreenPagerAdapter(this, this)
+        viewPager = binding.viewpagerContainer.mainScreenViewPager
         viewPager.isUserInputEnabled = false
         viewPager.adapter = viewPagerAdapter
     }
@@ -90,7 +96,7 @@ class MainActivity: AppCompatActivity() {
              * May be add some animation lately
              */
             override fun onSlide(bottomSheet: View, slideOffset: Float) {
-                //binding.background.alpha = slideOffset
+                binding.background.alpha = slideOffset
             }
 
         })

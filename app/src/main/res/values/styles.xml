@@ -19,6 +19,15 @@
         <item name="android:textSize">@dimen/small_text_size</item>
     </style>
 
+    <style name="DefaultStyleForAuthorizationTextViews" parent="DefaultStyleForTextView">
+        <item name="android:textSize">@dimen/less_middle_text_size</item>
+    </style>
+
+    <style name="DefaultStyleForAuthorizationSmallLabels" parent="DefaultStyleForTextView">
+        <item name="android:textSize">@dimen/authorization_labels_text_size</item>
+        <item name="android:textColor">@color/light_gray</item>
+    </style>
+
     <style name="DefaultStyleForBottomSheetTextViews" parent="DefaultStyleForMiddleTextView">
         <item name="android:textSize">@dimen/bottom_sheet_text_size</item>
         <item name="android:layout_marginStart">16dp</item>
@@ -70,6 +79,12 @@
         <item name="android:paddingBottom">@dimen/padding_vertical_for_big_buttons</item>
     </style>
 
+    <style name="DefaultStyleForBigAuthorizationButtons" parent="DefaultStyleForBigButtons">
+        <item name="android:textSize">@dimen/text_size_for_big_authorization_buttons</item>
+        <item name="android:paddingStart">@dimen/padding_horizontal_for_big_authorization_buttons</item>
+        <item name="android:paddingEnd">@dimen/padding_horizontal_for_big_authorization_buttons</item>
+    </style>
+
     <style name="BottomSheetDialogTheme" parent="Theme.Design.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
     </style>
@@ -86,6 +101,33 @@
         <item name="android:layout_gravity">bottom</item>
         <item name="hideOnScroll">true</item>
         <item name="layout_behavior">com.google.android.material.bottomappbar.BottomAppBar$Behavior</item>
+    </style>
+
+    <style name="DefaultStyleForEditText" parent="DefaultStyleForTextView">
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+    </style>
+
+    <style name="DefaultStyleForAuthorizationEditText" parent="DefaultStyleForEditText">
+        <item name="android:textSize">@dimen/small_text_size</item>
+        <item name="android:background">@drawable/background_for_authoriztion_edit_texts</item>
+        <item name="maxLines">1</item>
+        <item name="singleLine">true</item>
+    </style>
+
+    <style name="DefaultStyleForOrangeButtons" parent="DefaultStyleForTextView">
+        <item name="android:textColor">@color/base_orange</item>
+        <item name="android:textSize">@dimen/orange_button_text_size</item>
+        <item name="android:background">@drawable/background_for_orange_buttons</item>
+        <item name="background">@drawable/background_for_orange_buttons</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:paddingStart">@dimen/padding_horizontal_for_big_authorization_buttons</item>
+        <item name="android:paddingEnd">@dimen/padding_horizontal_for_big_authorization_buttons</item>
+        <item name="android:paddingTop">@dimen/padding_vertical_for_orange_buttons</item>
+        <item name="android:paddingBottom">@dimen/padding_vertical_for_orange_buttons</item>
     </style>
 
 </resources>

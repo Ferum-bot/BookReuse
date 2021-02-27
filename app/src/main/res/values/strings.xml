@@ -30,4 +30,10 @@
     <string name="github_link">https://github.com/Ferum-bot/BookReuse</string>
     <string name="base_message_for_no_activity_exception">Отсутствуют приложения, которые могут обработать этот запрос.</string>
     <string name="install_browser">Пожалуйста, установите браузер</string>
+    <string name="enter">Войти</string>
+    <string name="email_label">Почта</string>
+    <string name="password_label">Пароль</string>
+    <string name="enter_to_book_reuse">Войти в BookReuse</string>
+    <string name="forget_password">Забыл пароль</string>
+    <string name="register">Зарегистрироваться</string>
 </resources>

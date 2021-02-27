@@ -16,9 +16,9 @@ import com.github.ferum_bot.bookreuse.ui.fragment.delegates.viewBinding
  * Time: 14:08
  * Project: BookReuse
  */
-class PreviewScreenFragment: Fragment(R.layout.fragment_preview_screen) {
+class PreviewScreenFragment: Fragment(R.layout.fragment_entry_to_profile) {
 
-    private val binding by viewBinding { FragmentPreviewScreenBinding.bind(it) }
+    //private val binding by viewBinding { FragmentPreviewScreenBinding.bind(it) }
     //private val viewModel by viewModels<PreviewScreenViewModel> { ViewModelFactory() }
 
     /**
@@ -32,47 +32,47 @@ class PreviewScreenFragment: Fragment(R.layout.fragment_preview_screen) {
         }
 
         override fun onFinish() {
-            startPreviewAnimation()
+//            startPreviewAnimation()
         }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        setOnEndAnimationListener()
+//        setOnEndAnimationListener()
     }
 
     override fun onResume() {
         super.onResume()
 
-        timer.start()
+//        timer.start()
     }
 
-    private fun startPreviewAnimation() {
-        binding.motionLayout.transitionToEnd()
-    }
-
-    private fun setOnEndAnimationListener() {
-        binding.motionLayout.addTransitionListener(object: MotionLayout.TransitionListener {
-
-            override fun onTransitionTrigger(p0: MotionLayout?, p1: Int, p2: Boolean, p3: Float) {
-
-            }
-
-            override fun onTransitionStarted(p0: MotionLayout?, p1: Int, p2: Int) {
-
-            }
-
-            override fun onTransitionChange(p0: MotionLayout?, p1: Int, p2: Int, p3: Float) {
-
-            }
-
-            override fun onTransitionCompleted(p0: MotionLayout?, p1: Int) {
-                val activity = requireActivity() as LaunchActivity
-                activity.splashScreenHasShown()
-            }
-        })
-    }
+//    private fun startPreviewAnimation() {
+//        binding.motionLayout.transitionToEnd()
+//    }
+//
+//    private fun setOnEndAnimationListener() {
+//        binding.motionLayout.addTransitionListener(object: MotionLayout.TransitionListener {
+//
+//            override fun onTransitionTrigger(p0: MotionLayout?, p1: Int, p2: Boolean, p3: Float) {
+//
+//            }
+//
+//            override fun onTransitionStarted(p0: MotionLayout?, p1: Int, p2: Int) {
+//
+//            }
+//
+//            override fun onTransitionChange(p0: MotionLayout?, p1: Int, p2: Int, p3: Float) {
+//
+//            }
+//
+//            override fun onTransitionCompleted(p0: MotionLayout?, p1: Int) {
+//                val activity = requireActivity() as LaunchActivity
+//                activity.splashScreenHasShown()
+//            }
+//        })
+//    }
 
     private companion object {
         private const val TIMER_START_DELAY = 600L

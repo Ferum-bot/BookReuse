@@ -4,11 +4,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:id="@+id/background"
+        android:id="@+id/coordinator_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <include layout="@layout/fragment_main_screen_container"/>
+        <View
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.0"
+            android:background="@color/white"
+            android:clickable="false"/>
+
+        <include
+            android:id="@+id/viewpager_container"
+            layout="@layout/fragment_main_screen_container"/>
+
         <include layout="@layout/add_button_bottom_sheet"/>
 
         <com.google.android.material.bottomappbar.BottomAppBar
@@ -32,11 +43,7 @@
                     style="@style/DefaultStyleForAddButton"
 
                     app:srcCompat="@drawable/ic_add_circle_24px" />
-
             </com.github.ferum_bot.bottom_navigation_view.ui.BookReuseBottomNavigationView>
-
         </com.google.android.material.bottomappbar.BottomAppBar>
-
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
 </layout>
