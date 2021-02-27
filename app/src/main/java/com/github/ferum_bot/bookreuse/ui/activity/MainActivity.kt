@@ -13,6 +13,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.github.ferum_bot.bookreuse.R
+import com.github.ferum_bot.bookreuse.application.MainApplication
 import com.github.ferum_bot.bookreuse.databinding.ActivityMainBinding
 import com.github.ferum_bot.bookreuse.ui.interfaces.AuthorizationUtil
 import com.google.android.material.bottomsheet.BottomSheetBehavior
@@ -25,11 +26,19 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
  */
 class MainActivity: AppCompatActivity(), AuthorizationUtil {
 
+    val component by lazy {
+        val appComponent = (application as MainApplication).component
+        val mainActivityComponent = appComponent.mainActivityComponent().build()
+        mainActivityComponent.inject(this)
+        return@lazy mainActivityComponent
+    }
+
     private lateinit var binding: ActivityMainBinding
 
     private lateinit var createStuffBottomSheetBehavior: BottomSheetBehavior<ConstraintLayout>
 
     private lateinit var viewPager: ViewPager2
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

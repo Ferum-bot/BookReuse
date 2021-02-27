@@ -1,6 +1,7 @@
 package com.github.ferum_bot.bookreuse.application
 
 import android.app.Application
+import com.github.ferum_bot.bookreuse.di.components.DaggerAppComponent
 import timber.log.Timber
 
 /**
@@ -11,6 +12,12 @@ import timber.log.Timber
  */
 class MainApplication: Application() {
 
+    val component by lazy {
+        DaggerAppComponent.builder()
+            .addContext(applicationContext)
+            .build()
+    }
+
     override fun onCreate() {
         super.onCreate()
 
@@ -19,5 +26,9 @@ class MainApplication: Application() {
 
     private fun setUpTimber() {
         Timber.plant(Timber.DebugTree())
+    }
+
+    private fun initComponent() {
+
     }
 }
