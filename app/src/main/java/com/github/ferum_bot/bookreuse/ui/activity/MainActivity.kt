@@ -90,7 +90,7 @@ class MainActivity: AppCompatActivity() {
              * May be add some animation lately
              */
             override fun onSlide(bottomSheet: View, slideOffset: Float) {
-                binding.background.alpha = slideOffset
+                //binding.background.alpha = slideOffset
             }
 
         })
