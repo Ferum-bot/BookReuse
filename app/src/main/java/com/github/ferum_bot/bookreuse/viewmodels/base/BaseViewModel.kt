@@ -9,4 +9,5 @@ import androidx.lifecycle.ViewModel
  * Project: BookReuse
  */
 abstract class BaseViewModel: ViewModel() {
+
 }

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:state_enabled="true"
+        android:state_focused="false">
+        <layer-list
+            android:opacity="opaque">
+
+            <item>
+
+                <shape
+                    android:shape="rectangle">
+
+                    <solid
+                        android:color="@color/dark_black"/>
+
+                    <stroke
+                        android:width="@dimen/stroke_width_for_pin_edit_texts"
+                        android:color="@color/base_gray"/>
+                </shape>
+            </item>
+
+            <item
+                android:bottom="@dimen/stroke_width_for_bottom_navigation">
+
+                <shape
+                    android:shape="rectangle">
+
+                    <solid
+                        android:color="@color/dark_black"/>
+
+                    <stroke
+                        android:width="@dimen/stroke_width_for_pin_edit_texts"
+                        android:color="@color/dark_black"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <item
+        android:state_enabled="true"
+        android:state_focused="true">
+
+        <layer-list
+            android:opacity="opaque">
+
+            <item>
+
+                <shape
+                    android:shape="rectangle">
+
+                    <solid
+                        android:color="@color/dark_black"/>
+
+                    <stroke
+                        android:width="@dimen/stroke_width_for_pin_edit_texts"
+                        android:color="@color/base_yellow"/>
+                </shape>
+            </item>
+
+            <item
+                android:bottom="@dimen/stroke_width_for_bottom_navigation">
+
+                <shape
+                    android:shape="rectangle">
+
+                    <solid
+                        android:color="@color/dark_black"/>
+
+                    <stroke
+                        android:width="@dimen/stroke_width_for_pin_edit_texts"
+                        android:color="@color/dark_black"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

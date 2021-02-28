@@ -6,6 +6,7 @@ import androidx.navigation.fragment.findNavController
 import com.github.ferum_bot.bookreuse.R
 import com.github.ferum_bot.bookreuse.databinding.FragmentEntryToProfileBinding
 import com.github.ferum_bot.bookreuse.ui.activity.MainActivity
+import com.github.ferum_bot.bookreuse.ui.fragment.base.BaseFragment
 import com.github.ferum_bot.bookreuse.ui.fragment.delegates.viewBinding
 import com.github.ferum_bot.bookreuse.viewmodels.authentication.SignInViewModel
 
@@ -15,7 +16,13 @@ import com.github.ferum_bot.bookreuse.viewmodels.authentication.SignInViewModel
  * Time: 23:01
  * Project: BookReuse
  */
-class SignInFragment: Fragment(R.layout.fragment_entry_to_profile) {
+class SignInFragment: BaseFragment(R.layout.fragment_entry_to_profile) {
+
+    private val component by lazy {
+        val activity = requireActivity() as MainActivity
+        val component = activity.component.authorizationComponent()
+        return@lazy component.build()
+    }
 
     private val binding by viewBinding { FragmentEntryToProfileBinding.bind(it) }
 
@@ -55,7 +62,7 @@ class SignInFragment: Fragment(R.layout.fragment_entry_to_profile) {
         }
 
         binding.inputPasswordEditText.setOnKeyListener { view, keyCode, event ->
-
+            true
         }
     }
 

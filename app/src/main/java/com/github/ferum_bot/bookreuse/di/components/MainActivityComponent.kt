@@ -1,5 +1,6 @@
 package com.github.ferum_bot.bookreuse.di.components
 
+import com.github.ferum_bot.bookreuse.di.modules.MainActivitySubcomponents
 import com.github.ferum_bot.bookreuse.di.modules.MainActivityViewModelsModule
 import com.github.ferum_bot.bookreuse.di.scopes.ViewModelsScope
 import com.github.ferum_bot.bookreuse.ui.activity.MainActivity
@@ -15,13 +16,16 @@ import dagger.Subcomponent
  */
 @ViewModelsScope
 @Subcomponent(modules = [
-    MainActivityViewModelsModule::class
+    MainActivityViewModelsModule::class,
+    MainActivitySubcomponents::class
 ])
 interface MainActivityComponent {
 
     fun inject(activity: MainActivity)
 
     fun viewModelFactory(): ViewModelFactory
+
+    fun authorizationComponent(): AuthorizationComponent.Builder
 
     @Subcomponent.Builder
     interface Builder {

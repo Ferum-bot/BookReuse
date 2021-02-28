@@ -4,6 +4,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.github.ferum_bot.bookreuse.R
 import com.github.ferum_bot.bookreuse.databinding.FragmentHomeScreenContainerBinding
+import com.github.ferum_bot.bookreuse.ui.fragment.base.BaseFragment
 import com.github.ferum_bot.bookreuse.ui.fragment.delegates.viewBinding
 
 /**
@@ -12,7 +13,7 @@ import com.github.ferum_bot.bookreuse.ui.fragment.delegates.viewBinding
  * Time: 21:47
  * Project: BookReuse
  */
-class HomeScreenFragment: Fragment(R.layout.fragment_home_screen_container) {
+class HomeScreenFragment: BaseFragment(R.layout.fragment_home_screen_container) {
 
     private val binding by viewBinding { FragmentHomeScreenContainerBinding.bind(it) }
 

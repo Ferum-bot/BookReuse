@@ -1,6 +1,7 @@
 package com.github.ferum_bot.bookreuse.viewmodels.authentication
 
 import androidx.lifecycle.ViewModel
+import com.github.ferum_bot.bookreuse.core.models.interfaces.ResourceProvider
 import javax.inject.Inject
 
 /**
@@ -9,6 +10,8 @@ import javax.inject.Inject
  * Time: 23:03
  * Project: BookReuse
  */
-class SignInViewModel @Inject constructor(): ViewModel() {
+class SignInViewModel @Inject constructor(
+    private val resourceProvider: ResourceProvider
+): ViewModel() {
 
 }

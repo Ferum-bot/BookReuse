@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import com.github.ferum_bot.bookreuse.R
 import com.github.ferum_bot.bookreuse.databinding.FragmentPreviewScreenBinding
 import com.github.ferum_bot.bookreuse.ui.activity.LaunchActivity
+import com.github.ferum_bot.bookreuse.ui.fragment.base.BaseFragment
 import com.github.ferum_bot.bookreuse.ui.fragment.delegates.viewBinding
 
 /**
@@ -16,7 +17,7 @@ import com.github.ferum_bot.bookreuse.ui.fragment.delegates.viewBinding
  * Time: 14:08
  * Project: BookReuse
  */
-class PreviewScreenFragment: Fragment(R.layout.fragment_entry_to_profile) {
+class PreviewScreenFragment: BaseFragment(R.layout.fragment_confirm_recover_code) {
 
     //private val binding by viewBinding { FragmentPreviewScreenBinding.bind(it) }
     //private val viewModel by viewModels<PreviewScreenViewModel> { ViewModelFactory() }

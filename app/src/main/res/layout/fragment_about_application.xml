@@ -17,7 +17,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:title="@string/about_application"
-            app:navigationIcon="@drawable/ic_baseline_arrow_back_ios_24"
+            app:navigationIcon="@drawable/ic_baseline_arrow_white_ios_24"
 
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -1,5 +1,8 @@
 package com.github.ferum_bot.bookreuse.di.modules
 
+import com.github.ferum_bot.bookreuse.core.models.implementations.AndroidResourceProvider
+import com.github.ferum_bot.bookreuse.core.models.interfaces.ResourceProvider
+import dagger.Binds
 import dagger.Module
 
 /**
@@ -9,6 +12,9 @@ import dagger.Module
  * Project: BookReuse
  */
 @Module
-open class ResourcesModule {
+abstract class ResourcesModule {
+
+    @Binds
+    abstract fun bindResourceProvider(provider: AndroidResourceProvider): ResourceProvider
 
 }

@@ -28,6 +28,14 @@
         <item name="android:textColor">@color/light_gray</item>
     </style>
 
+    <style name="DefaultStyleForAuthorizationErrorSmallLabels" parent="DefaultStyleForAuthorizationSmallLabels">
+        <item name="android:textColor">@color/base_red</item>
+    </style>
+
+    <style name="DefaultStyleForAuthorizationDescriptionLabels" parent="DefaultStyleForAuthorizationSmallLabels">
+        <item name="android:textSize">@dimen/authorization_labels_description_text_size</item>
+    </style>
+
     <style name="DefaultStyleForBottomSheetTextViews" parent="DefaultStyleForMiddleTextView">
         <item name="android:textSize">@dimen/bottom_sheet_text_size</item>
         <item name="android:layout_marginStart">16dp</item>
@@ -130,4 +138,14 @@
         <item name="android:paddingBottom">@dimen/padding_vertical_for_orange_buttons</item>
     </style>
 
+    <style name="DefaultStyleForPinEditTexts" parent="DefaultStyleForTextView">
+        <item name="android:layout_width">@dimen/width_for_pin_edit_texts</item>
+        <item name="maxLines">1</item>
+        <item name="android:maxLength">1</item>
+        <item name="singleLine">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:inputType">number</item>
+        <item name="android:textSize">@dimen/middle_text_size</item>
+        <item name="android:background">@drawable/background_for_pin_edit_texts</item>
+    </style>
 </resources>

@@ -5,10 +5,12 @@
     <dimen name="middle_text_size">26sp</dimen>
     <dimen name="small_text_size">16dp</dimen>
     <dimen name="authorization_labels_text_size">14sp</dimen>
+    <dimen name="authorization_labels_description_text_size">16dp</dimen>
     <dimen name="less_middle_text_size">22sp</dimen>
     <dimen name="bottom_sheet_text_size">18sp</dimen>
     <dimen name="icon_size_for_bottom_navigation">30dp</dimen>
     <dimen name="stroke_width_for_bottom_navigation">1dp</dimen>
+    <dimen name="stroke_width_for_pin_edit_texts">5dp</dimen>
     <dimen name="text_size_for_big_buttons">20sp</dimen>
     <dimen name="text_size_for_big_authorization_buttons">18sp</dimen>
     <dimen name="big_button_round_corners">20dp</dimen>
@@ -22,4 +24,5 @@
     <dimen name="size_of_authorization_animals">160dp</dimen>
     <dimen name="add_stuff_button_size">43dp</dimen>
     <dimen name="orange_button_text_size">14sp</dimen>
+    <dimen name="width_for_pin_edit_texts">35dp</dimen>
 </resources>

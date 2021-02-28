@@ -36,4 +36,12 @@
     <string name="enter_to_book_reuse">Войти в BookReuse</string>
     <string name="forget_password">Забыл пароль</string>
     <string name="register">Зарегистрироваться</string>
+    <string name="password_recovery">Восстановление доступа</string>
+    <string name="recovery_password_description">Забыли пароль? Введите свою почту и мы вышлем вам специальный код.</string>
+    <string name="send">Отправить</string>
+    <string name="enter_email_error">Введите почту</string>
+    <string name="enter_password_error">Введите пароль</string>
+    <string name="confirm_recover_code_description">Введите 5-ти значный код с почты. Повторно выслать код можно будет через %d секунд.</string>
+    <string name="proceed">Продолжить</string>
+    <string name="send_again">Отправить еще раз</string>
 </resources>

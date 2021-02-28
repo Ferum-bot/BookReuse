@@ -2,6 +2,7 @@ package com.github.ferum_bot.bookreuse.di.components
 
 import android.content.Context
 import com.github.ferum_bot.bookreuse.di.modules.AppSubcomponents
+import com.github.ferum_bot.bookreuse.di.modules.ResourcesModule
 import com.github.ferum_bot.bookreuse.viewmodels.factory.ViewModelFactory
 import dagger.BindsInstance
 import dagger.Component
@@ -15,6 +16,7 @@ import javax.inject.Singleton
  */
 @Component(modules = [
     AppSubcomponents::class,
+    ResourcesModule::class
 ])
 interface AppComponent {
 
