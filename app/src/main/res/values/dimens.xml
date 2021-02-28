@@ -25,4 +25,5 @@
     <dimen name="add_stuff_button_size">43dp</dimen>
     <dimen name="orange_button_text_size">14sp</dimen>
     <dimen name="width_for_pin_edit_texts">35dp</dimen>
+    <dimen name="orange_button_layout_height">35dp</dimen>
 </resources>

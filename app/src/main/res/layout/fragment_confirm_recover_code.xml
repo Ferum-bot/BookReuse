@@ -119,7 +119,7 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/resend_code_button"
             android:layout_width="0dp"
-            android:layout_height="35dp"
+            android:layout_height="@dimen/orange_button_layout_height"
             android:text="@string/send_again"
 
             android:layout_marginTop="16dp"

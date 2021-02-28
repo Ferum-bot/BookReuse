@@ -41,7 +41,7 @@
     <string name="send">Отправить</string>
     <string name="enter_email_error">Введите почту</string>
     <string name="enter_password_error">Введите пароль</string>
-    <string name="confirm_recover_code_description">Введите 5-ти значный код с почты. Повторно выслать код можно будет через %d секунд.</string>
+    <string name="confirm_recover_code_description">Введите 5-ти значный код с почты. Повторно выслать код можно будет через %s секунд.</string>
     <string name="proceed">Продолжить</string>
     <string name="send_again">Отправить еще раз</string>
 </resources>

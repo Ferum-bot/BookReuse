@@ -2,7 +2,10 @@ package com.github.ferum_bot.bookreuse.ui.fragment.base
 
 import android.content.ActivityNotFoundException
 import android.widget.Toast
+import androidx.annotation.ColorInt
+import androidx.annotation.ColorRes
 import androidx.annotation.LayoutRes
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.github.ferum_bot.bookreuse.R
 import com.github.ferum_bot.bookreuse.ui.interfaces.ShowToasts
@@ -53,4 +56,7 @@ abstract class BaseFragment(@LayoutRes id: Int): Fragment(id), ShowToasts{
             showUnsuccessfulMessage(message.toString())
         }
     }
+
+    protected fun getColor(@ColorRes id: Int): Int =
+        ContextCompat.getColor(requireContext(), id)
 }
