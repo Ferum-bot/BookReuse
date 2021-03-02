@@ -59,4 +59,9 @@
     <string name="not_specified">Не указан</string>
     <string name="address_optional">Адрес(опционально)</string>
     <string name="allow_call">Разрешить звонки</string>
+    <string name="address">Адрес</string>
+    <string name="apply">Применить</string>
+
+    <!--BookReuse API Keys -->
+    <string name="yandex_map_kit_api_key">dcf26561-93f6-428a-8363-586d99056ea4</string>
 </resources>

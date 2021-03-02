@@ -10,6 +10,7 @@ import com.github.ferum_bot.bookreuse.R
 import com.github.ferum_bot.bookreuse.databinding.FragmentEntryToProfileBinding
 import com.github.ferum_bot.bookreuse.ui.activity.MainActivity
 import com.github.ferum_bot.bookreuse.ui.fragment.base.BaseFragment
+import com.github.ferum_bot.bookreuse.ui.fragment.base.MainActivityBaseFragment
 import com.github.ferum_bot.bookreuse.ui.fragment.delegates.viewBinding
 import com.github.ferum_bot.bookreuse.viewmodels.authentication.SignInViewModel
 
@@ -19,20 +20,13 @@ import com.github.ferum_bot.bookreuse.viewmodels.authentication.SignInViewModel
  * Time: 23:01
  * Project: BookReuse
  */
-class SignInFragment: BaseFragment(R.layout.fragment_entry_to_profile) {
+class SignInFragment: MainActivityBaseFragment(R.layout.fragment_entry_to_profile) {
 
-    private val component by lazy {
-        val activity = requireActivity() as MainActivity
-        val component = activity.component.authorizationComponent()
-        return@lazy component.build()
-    }
+    private val component by lazy { activityComponent.authorizationComponent().build() }
 
     private val binding by viewBinding { FragmentEntryToProfileBinding.bind(it) }
 
-    private val viewModel by viewModels<SignInViewModel> {
-        val activityComponent = (requireActivity() as MainActivity).component
-        activityComponent.viewModelFactory()
-    }
+    private val viewModel by viewModels<SignInViewModel> { activityComponent.viewModelFactory() }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

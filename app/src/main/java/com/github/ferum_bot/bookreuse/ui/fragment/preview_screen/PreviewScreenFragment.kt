@@ -17,7 +17,7 @@ import com.github.ferum_bot.bookreuse.ui.fragment.delegates.viewBinding
  * Time: 14:08
  * Project: BookReuse
  */
-class PreviewScreenFragment: BaseFragment(R.layout.fragment_confirm_recover_code) {
+class PreviewScreenFragment: BaseFragment(R.layout.fragment_preview_screen) {
 
     //private val binding by viewBinding { FragmentPreviewScreenBinding.bind(it) }
     //private val viewModel by viewModels<PreviewScreenViewModel> { ViewModelFactory() }

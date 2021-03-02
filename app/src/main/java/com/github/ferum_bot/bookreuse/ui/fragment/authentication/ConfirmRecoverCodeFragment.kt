@@ -13,6 +13,7 @@ import com.github.ferum_bot.bookreuse.databinding.FragmentConfirmRecoverCodeBind
 import com.github.ferum_bot.bookreuse.di.components.MainActivityComponent
 import com.github.ferum_bot.bookreuse.ui.activity.MainActivity
 import com.github.ferum_bot.bookreuse.ui.fragment.base.BaseFragment
+import com.github.ferum_bot.bookreuse.ui.fragment.base.MainActivityBaseFragment
 import com.github.ferum_bot.bookreuse.ui.fragment.delegates.viewBinding
 import com.github.ferum_bot.bookreuse.viewmodels.authentication.ConfirmRecoverCodeViewModel
 
@@ -22,13 +23,7 @@ import com.github.ferum_bot.bookreuse.viewmodels.authentication.ConfirmRecoverCo
  * Time: 20:07
  * Project: BookReuse
  */
-class ConfirmRecoverCodeFragment: BaseFragment(R.layout.fragment_confirm_recover_code) {
-
-    private val activityComponent: MainActivityComponent
-        get() {
-            val activity = requireActivity() as MainActivity
-            return activity.component
-        }
+class ConfirmRecoverCodeFragment: MainActivityBaseFragment(R.layout.fragment_confirm_recover_code) {
 
     private val component by lazy { activityComponent.authorizationComponent().build() }
 

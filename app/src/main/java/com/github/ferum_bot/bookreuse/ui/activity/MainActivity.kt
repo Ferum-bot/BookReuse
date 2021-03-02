@@ -17,6 +17,7 @@ import com.github.ferum_bot.bookreuse.application.MainApplication
 import com.github.ferum_bot.bookreuse.databinding.ActivityMainBinding
 import com.github.ferum_bot.bookreuse.ui.interfaces.AuthorizationUtil
 import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.yandex.mapkit.MapKitFactory
 
 /**
  * Created by Matvey Popov.
@@ -45,6 +46,7 @@ class MainActivity: AppCompatActivity(), AuthorizationUtil {
         initViewBinding()
         setContentView(binding.root)
         setUpAllViews()
+        initYandexMapKit()
     }
 
     override fun onStart() {
@@ -69,6 +71,12 @@ class MainActivity: AppCompatActivity(), AuthorizationUtil {
     private fun setUpAllViews() {
         setUpBottomSheet()
         setUpViewPager()
+    }
+
+    private fun initYandexMapKit() {
+       val apiKey = getString(R.string.yandex_map_kit_api_key)
+        MapKitFactory.setApiKey(apiKey)
+        MapKitFactory.initialize(this)
     }
 
     private fun setUpBottomSheet() {

@@ -40,4 +40,9 @@ abstract class MainActivityViewModelsModule {
     @IntoMap
     @ViewModelKey(GeneralInformationViewModel::class)
     abstract fun bindGeneralInformationViewModel(viewModel: GeneralInformationViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(ChooseAddressRegistrationViewModel::class)
+    abstract fun bindChooseAddressRegistrationViewModel(viewModel: ChooseAddressRegistrationViewModel): ViewModel
 }

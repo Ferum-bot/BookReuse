@@ -7,6 +7,7 @@ import com.github.ferum_bot.bookreuse.R
 import com.github.ferum_bot.bookreuse.databinding.FragmentForgetPasswordBinding
 import com.github.ferum_bot.bookreuse.ui.activity.MainActivity
 import com.github.ferum_bot.bookreuse.ui.fragment.base.BaseFragment
+import com.github.ferum_bot.bookreuse.ui.fragment.base.MainActivityBaseFragment
 import com.github.ferum_bot.bookreuse.ui.fragment.delegates.viewBinding
 
 /**
@@ -15,13 +16,9 @@ import com.github.ferum_bot.bookreuse.ui.fragment.delegates.viewBinding
  * Time: 20:06
  * Project: BookReuse
  */
-class ForgetPasswordFragment: BaseFragment(R.layout.fragment_forget_password) {
+class ForgetPasswordFragment: MainActivityBaseFragment(R.layout.fragment_forget_password) {
 
-    private val component by lazy {
-        val activity = requireActivity() as MainActivity
-        val component = activity.component.authorizationComponent()
-        return@lazy component.build()
-    }
+    private val component by lazy { activityComponent.authorizationComponent().build() }
 
     private val binding by viewBinding { FragmentForgetPasswordBinding.bind(it) }
 

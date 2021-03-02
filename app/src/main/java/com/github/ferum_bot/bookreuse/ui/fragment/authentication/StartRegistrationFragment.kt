@@ -8,6 +8,7 @@ import androidx.fragment.app.viewModels
 import com.github.ferum_bot.bookreuse.R
 import com.github.ferum_bot.bookreuse.databinding.FragmentStartRegistrationBinding
 import com.github.ferum_bot.bookreuse.ui.activity.MainActivity
+import com.github.ferum_bot.bookreuse.ui.fragment.base.MainActivityBaseFragment
 import com.github.ferum_bot.bookreuse.ui.fragment.delegates.viewBinding
 import com.github.ferum_bot.bookreuse.viewmodels.authentication.StartRegistrationViewModel
 
@@ -17,20 +18,13 @@ import com.github.ferum_bot.bookreuse.viewmodels.authentication.StartRegistratio
  * Time: 18:20
  * Project: BookReuse
  */
-class StartRegistrationFragment: Fragment(R.layout.fragment_start_registration) {
+class StartRegistrationFragment: MainActivityBaseFragment(R.layout.fragment_start_registration) {
 
-    private val component by lazy {
-        val activity = requireActivity() as MainActivity
-        val component = activity.component.authorizationComponent()
-        return@lazy component.build()
-    }
+    private val component by lazy { activityComponent.authorizationComponent().build() }
 
     private val binding by viewBinding { FragmentStartRegistrationBinding.bind(it) }
 
-    private val viewModel by viewModels<StartRegistrationViewModel> {
-        val activity = requireActivity() as MainActivity
-        activity.component.viewModelFactory()
-    }
+    private val viewModel by viewModels<StartRegistrationViewModel> { activityComponent.viewModelFactory() }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

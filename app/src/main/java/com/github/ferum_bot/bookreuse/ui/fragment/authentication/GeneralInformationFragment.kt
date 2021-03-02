@@ -9,6 +9,7 @@ import com.github.ferum_bot.bookreuse.databinding.FragmentGeneralInformationRegi
 import com.github.ferum_bot.bookreuse.databinding.FragmentStartRegistrationBinding
 import com.github.ferum_bot.bookreuse.ui.activity.MainActivity
 import com.github.ferum_bot.bookreuse.ui.fragment.base.BaseFragment
+import com.github.ferum_bot.bookreuse.ui.fragment.base.MainActivityBaseFragment
 import com.github.ferum_bot.bookreuse.ui.fragment.delegates.viewBinding
 import com.github.ferum_bot.bookreuse.viewmodels.authentication.GeneralInformationViewModel
 import com.github.ferum_bot.bookreuse.viewmodels.authentication.StartRegistrationViewModel
@@ -20,20 +21,13 @@ import com.github.ferum_bot.bookreuse.viewmodels.authentication.StartRegistratio
  * Project: BookReuse
  */
 
-class GeneralInformationFragment: BaseFragment(R.layout.fragment_general_information_registration) {
+class GeneralInformationFragment: MainActivityBaseFragment(R.layout.fragment_general_information_registration) {
 
-    private val component by lazy {
-        val activity = requireActivity() as MainActivity
-        val component = activity.component.authorizationComponent()
-        return@lazy component.build()
-    }
+    private val component by lazy { activityComponent.authorizationComponent().build() }
 
     private val binding by viewBinding { FragmentGeneralInformationRegistrationBinding.bind(it) }
 
-    private val viewModel by viewModels<GeneralInformationViewModel> {
-        val activity = requireActivity() as MainActivity
-        activity.component.viewModelFactory()
-    }
+    private val viewModel by viewModels<GeneralInformationViewModel> { activityComponent.viewModelFactory() }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

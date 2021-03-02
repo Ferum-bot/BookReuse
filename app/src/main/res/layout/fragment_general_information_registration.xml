@@ -131,7 +131,7 @@
             android:id="@+id/input_telephone_number_edit_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:inputType="text"
+            android:inputType="numberSigned"
             android:hint="@string/not_specified"
 
             android:layout_marginTop="4dp"
