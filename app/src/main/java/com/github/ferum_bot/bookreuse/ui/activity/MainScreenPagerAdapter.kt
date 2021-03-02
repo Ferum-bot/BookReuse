@@ -3,6 +3,8 @@ package com.github.ferum_bot.bookreuse.ui.activity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.github.ferum_bot.bookreuse.ui.fragment.about_application.AboutApplicationFragment
+import com.github.ferum_bot.bookreuse.ui.fragment.authentication.ChooseAddressRegistrationFragment
+import com.github.ferum_bot.bookreuse.ui.fragment.authentication.GeneralInformationFragment
 import com.github.ferum_bot.bookreuse.ui.fragment.home_screen.HomeScreenFragment
 import com.github.ferum_bot.bookreuse.ui.fragment.messages.AnonimusUserMessagesScreenFragment
 import com.github.ferum_bot.bookreuse.ui.fragment.messages.MessagesScreenFragment
@@ -31,10 +33,10 @@ class MainScreenPagerAdapter(
     override fun createFragment(position: Int): Fragment {
         return when(position) {
             POSITION_OF_HOME_FRAGMENT -> {
-                HomeScreenFragment()
+                ChooseAddressRegistrationFragment()
             }
             POSITION_OF_SEARCH_FRAGMENT -> {
-                SearchScreenFragment()
+                GeneralInformationFragment()
             }
             POSITION_OF_MESSAGES_FRAGMENT -> {
                 if (isUserAuthorized) {

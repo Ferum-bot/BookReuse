@@ -74,7 +74,7 @@ class MainActivity: AppCompatActivity(), AuthorizationUtil {
     }
 
     private fun initYandexMapKit() {
-       val apiKey = getString(R.string.yandex_map_kit_api_key)
+        val apiKey = getString(R.string.yandex_map_kit_api_key)
         MapKitFactory.setApiKey(apiKey)
         MapKitFactory.initialize(this)
     }

@@ -172,7 +172,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="@string/not_specified"
-            android:clickable="false"
             android:focusable="false"
 
             android:layout_marginTop="4dp"

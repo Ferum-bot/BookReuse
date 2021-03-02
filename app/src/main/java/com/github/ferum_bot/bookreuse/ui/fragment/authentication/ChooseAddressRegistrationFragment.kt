@@ -10,6 +10,7 @@ import com.github.ferum_bot.bookreuse.ui.fragment.delegates.viewBinding
 import com.github.ferum_bot.bookreuse.viewmodels.authentication.ChooseAddressRegistrationViewModel
 import com.yandex.mapkit.MapKit
 import com.yandex.mapkit.MapKitFactory
+import com.yandex.mapkit.map.CameraPosition
 
 /**
  * Created by Matvey Popov.
@@ -37,10 +38,18 @@ class ChooseAddressRegistrationFragment: MainActivityBaseFragment(R.layout.fragm
         stopMapView()
     }
 
+    override fun onResume() {
+        super.onResume()
+    }
 
     private fun startMapView() {
-        binding.mapView.onStart()
+        configureMapView()
         MapKitFactory.getInstance().onStart()
+        binding.mapView.onStart()
+    }
+
+    private fun configureMapView() {
+        binding.mapView.map.isNightModeEnabled = true
     }
 
     private fun stopMapView() {
