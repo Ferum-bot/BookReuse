@@ -123,6 +123,8 @@
         <item name="android:background">@drawable/background_for_authoriztion_edit_texts</item>
         <item name="maxLines">1</item>
         <item name="singleLine">true</item>
+        <item name="hintEnabled">true</item>
+        <item name="hintTextColor">@color/base_white</item>
     </style>
 
     <style name="DefaultStyleForOrangeButtons" parent="DefaultStyleForTextView">
@@ -147,5 +149,16 @@
         <item name="android:inputType">number</item>
         <item name="android:textSize">@dimen/middle_text_size</item>
         <item name="android:background">@drawable/background_for_pin_edit_texts</item>
+        <item name="android:paddingBottom">@dimen/bottom_padding_for_input_edit_texts_pin_view</item>
+    </style>
+
+    <style name="DefaultStyleForSwitchToggle" parent="DefaultStyleForTextView">
+        <item name="track">@drawable/track_for_switch_toggle</item>
+        <item name="android:thumb">@drawable/thumb_for_switch_toggle</item>
+        <item name="android:checked">true</item>
+    </style>
+
+    <style name="DefaultStyleForSwitchLabels" parent="DefaultStyleForTextView">
+        <item name="android:textSize">@dimen/bottom_sheet_text_size</item>
     </style>
 </resources>

@@ -26,4 +26,8 @@
     <dimen name="orange_button_text_size">14sp</dimen>
     <dimen name="width_for_pin_edit_texts">35dp</dimen>
     <dimen name="orange_button_layout_height">35dp</dimen>
+    <dimen name="bottom_padding_for_input_edit_texts_pin_view">3dp</dimen>
+    <dimen name="track_switch_toggle_corners_radius">40dp</dimen>
+    <dimen name="thumb_size">26dp</dimen>
+    <dimen name="thumb_stroke_width">1dp</dimen>
 </resources>

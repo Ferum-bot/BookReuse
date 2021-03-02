@@ -2,8 +2,7 @@ package com.github.ferum_bot.bookreuse.di.modules
 
 import androidx.lifecycle.ViewModel
 import com.github.ferum_bot.bookreuse.di.annotations.ViewModelKey
-import com.github.ferum_bot.bookreuse.viewmodels.authentication.ConfirmRecoverCodeViewModel
-import com.github.ferum_bot.bookreuse.viewmodels.authentication.SignInViewModel
+import com.github.ferum_bot.bookreuse.viewmodels.authentication.*
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
@@ -26,4 +25,19 @@ abstract class MainActivityViewModelsModule {
     @IntoMap
     @ViewModelKey(ConfirmRecoverCodeViewModel::class)
     abstract fun bindConfirmRecoverCodeViewModel(viewModel: ConfirmRecoverCodeViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(RecoveryPasswordViewModel::class)
+    abstract fun bindRecoveryPasswordViewModel(viewModel: RecoveryPasswordViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(StartRegistrationViewModel::class)
+    abstract fun bindStartRegistrationViewModel(viewModel: StartRegistrationViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(GeneralInformationViewModel::class)
+    abstract fun bindGeneralInformationViewModel(viewModel: GeneralInformationViewModel): ViewModel
 }

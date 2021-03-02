@@ -1,5 +1,8 @@
 package com.github.ferum_bot.bookreuse.ui.fragment.authentication
 
+import android.animation.LayoutTransition
+import android.os.Bundle
+import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -31,11 +34,22 @@ class SignInFragment: BaseFragment(R.layout.fragment_entry_to_profile) {
         activityComponent.viewModelFactory()
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        setUpAnimations()
+    }
+
     override fun onStart() {
         super.onStart()
 
         setAllClickListeners()
         setAllTextChangeListeners()
+    }
+
+    private fun setUpAnimations() {
+        val layoutTransition = binding.mainViewGroup.layoutTransition
+        layoutTransition.enableTransitionType(LayoutTransition.CHANGING)
     }
 
     private fun setAllClickListeners() {

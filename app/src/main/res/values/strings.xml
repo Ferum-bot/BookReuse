@@ -44,4 +44,19 @@
     <string name="confirm_recover_code_description">Введите 5-ти значный код с почты. Повторно выслать код можно будет через %s секунд.</string>
     <string name="proceed">Продолжить</string>
     <string name="send_again">Отправить еще раз</string>
+    <string name="come_up_with_new_password">Придумайте новый пароль.</string>
+    <string name="new_password">Новый пароль</string>
+    <string name="repeat_new_password">Повторите пароль</string>
+    <string name="passwords_not_match_error">Пароли не совпадают</string>
+    <string name="confirm">Завершить</string>
+    <string name="registration">Регистрация</string>
+    <string name="come_up_with_password">Придумайте пароль</string>
+    <string name="general_information">Общая информация</string>
+    <string name="nickname_necessarily">Ник(обязательно)</string>
+    <string name="nick_name_label_error">Укажите ник</string>
+    <string name="telephone_optional">Телефон(опционально)</string>
+    <string name="telephone_number_invalid_format">Неверный формат</string>
+    <string name="not_specified">Не указан</string>
+    <string name="address_optional">Адрес(опционально)</string>
+    <string name="allow_call">Разрешить звонки</string>
 </resources>

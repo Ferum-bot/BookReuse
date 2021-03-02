@@ -1,5 +1,6 @@
 package com.github.ferum_bot.bookreuse.di.components
 
+import com.github.ferum_bot.bookreuse.di.scopes.AuthorizationScope
 import dagger.Subcomponent
 
 /**
