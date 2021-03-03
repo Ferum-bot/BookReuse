@@ -161,4 +161,42 @@
     <style name="DefaultStyleForSwitchLabels" parent="DefaultStyleForTextView">
         <item name="android:textSize">@dimen/bottom_sheet_text_size</item>
     </style>
+
+    <style name="DefaultStyleForSmallCardView">
+        <item name="android:background">@drawable/background_for_small_advert_card_view</item>
+        <item name="background">@drawable/background_for_small_advert_card_view</item>
+        <item name="backgroundTint">@drawable/background_for_small_advert_card_view</item>
+        <item name="cardCornerRadius">@dimen/small_advert_item_radius</item>
+        <item name="cardBackgroundColor">@color/light_black</item>
+        <item name="android:layout_margin">4dp</item>
+    </style>
+
+    <style name="DefaultStyleForImageView">
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="DefaultStyleForSmallAdvertLabels" parent="DefaultStyleForTextView">
+        <item name="android:textSize">@dimen/small_advert_label_text_size</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:minLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="DefaultStyleForSmallAdvertAuthorLabels" parent="DefaultStyleForTextView">
+        <item name="android:textSize">@dimen/small_advert_label_text_size</item>
+        <item name="android:textColor">@color/light_gray</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:minLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="DefaultStyleForSmallAdvertDateTextView" parent="DefaultStyleForSmallAdvertAuthorLabels">
+        <item name="android:textSize">@dimen/small_advert_date_text_size</item>
+        <item name="android:textColor">@color/base_gray</item>
+    </style>
+
+    <style name="DefaultStyleForSmallItemProfileImageView">
+        <item name="civ_border_width">0dp</item>
+    </style>
 </resources>

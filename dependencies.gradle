@@ -10,6 +10,7 @@ ext.versions = [
         navigation      : '2.3.3',
         yandexMapKit    : '4.0.0',
         detekt          : "1.16.0-RC2",
+        circleImageView : '3.1.0',
 ]
 
 ext.libs = [
@@ -53,5 +54,8 @@ ext.libs = [
         navigationUI               : "androidx.navigation:navigation-ui-ktx:$versions.navigation",
 
         // Yandex MapKit
-        mapKitFull                 : "com.yandex.android:maps.mobile:$versions.yandexMapKit-full"
+        mapKitFull                 : "com.yandex.android:maps.mobile:$versions.yandexMapKit-full",
+
+        // Circle Image View
+        circleImageView            : "de.hdodenhof:circleimageview:$versions.circleImageView"
 ]
