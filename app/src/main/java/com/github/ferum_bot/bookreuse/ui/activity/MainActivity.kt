@@ -18,6 +18,8 @@ import com.github.ferum_bot.bookreuse.databinding.ActivityMainBinding
 import com.github.ferum_bot.bookreuse.ui.interfaces.AuthorizationUtil
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.yandex.mapkit.MapKitFactory
+import com.yandex.mapkit.map.Map
+import com.yandex.mapkit.search.SearchFactory
 
 /**
  * Created by Matvey Popov.
@@ -77,6 +79,7 @@ class MainActivity: AppCompatActivity(), AuthorizationUtil {
         val apiKey = getString(R.string.yandex_map_kit_api_key)
         MapKitFactory.setApiKey(apiKey)
         MapKitFactory.initialize(this)
+        SearchFactory.initialize(this)
     }
 
     private fun setUpBottomSheet() {

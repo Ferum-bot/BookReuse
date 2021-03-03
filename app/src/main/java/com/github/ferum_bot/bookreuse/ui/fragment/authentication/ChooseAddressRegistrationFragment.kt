@@ -1,5 +1,7 @@
 package com.github.ferum_bot.bookreuse.ui.fragment.authentication
 
+import android.os.Bundle
+import android.view.View
 import androidx.fragment.app.viewModels
 import com.github.ferum_bot.bookreuse.R
 import com.github.ferum_bot.bookreuse.databinding.FragmentChooseAddressRegistrationBinding
@@ -11,6 +13,7 @@ import com.github.ferum_bot.bookreuse.viewmodels.authentication.ChooseAddressReg
 import com.yandex.mapkit.MapKit
 import com.yandex.mapkit.MapKitFactory
 import com.yandex.mapkit.map.CameraPosition
+import com.yandex.mapkit.search.SearchFactory
 
 /**
  * Created by Matvey Popov.
@@ -38,13 +41,10 @@ class ChooseAddressRegistrationFragment: MainActivityBaseFragment(R.layout.fragm
         stopMapView()
     }
 
-    override fun onResume() {
-        super.onResume()
-    }
-
     private fun startMapView() {
         configureMapView()
         MapKitFactory.getInstance().onStart()
+        binding.mapView.visibility = View.VISIBLE
         binding.mapView.onStart()
     }
 
@@ -54,6 +54,7 @@ class ChooseAddressRegistrationFragment: MainActivityBaseFragment(R.layout.fragm
 
     private fun stopMapView() {
         binding.mapView.onStop()
+        binding.mapView.visibility = View.GONE
         MapKitFactory.getInstance().onStop()
     }
 }

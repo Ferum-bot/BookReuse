@@ -40,6 +40,12 @@ android {
     }
 }
 
+repositories {
+    maven {
+        url "http://maven.google.com/"
+    }
+}
+
 dependencies {
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])

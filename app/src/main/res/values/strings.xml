@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">BookReuse</string>
     <string name="book_reuse">BookReuse</string>
     <string name="rent_books">Арендуй книги</string>
@@ -63,5 +63,7 @@
     <string name="apply">Применить</string>
 
     <!--BookReuse API Keys -->
-    <string name="yandex_map_kit_api_key">dcf26561-93f6-428a-8363-586d99056ea4</string>
+    <string
+        name="yandex_map_kit_api_key"
+        tools:ignore="TypographyDashes">4c619afc-1121-4a93-9913-5e2cce4af954</string>
 </resources>
