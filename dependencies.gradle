@@ -9,6 +9,7 @@ ext.versions = [
         motionLayout    : '2.0.0',
         navigation      : '2.3.3',
         yandexMapKit    : '4.0.0',
+        detekt          : "1.16.0-RC2",
 ]
 
 ext.libs = [
