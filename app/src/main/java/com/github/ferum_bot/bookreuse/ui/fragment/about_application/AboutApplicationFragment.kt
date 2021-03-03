@@ -181,7 +181,6 @@ class AboutApplicationFragment: BaseFragment(R.layout.fragment_about_application
     }
 
     private fun setUpBaseOptionsToClickableSpan(ds: TextPaint) {
-        ds.underlineColor = ContextCompat.getColor(requireContext(), R.color.base_white)
         ds.linkColor = ContextCompat.getColor(requireContext(), R.color.base_white)
         ds.color = ContextCompat.getColor(requireContext(), R.color.base_white)
     }
