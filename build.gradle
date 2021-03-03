@@ -17,7 +17,6 @@ buildscript {
 
 plugins {
     id "io.gitlab.arturbosch.detekt" version "1.16.0-RC2"
-    id 'pmd'
 }
 
 tasks.detekt.jvmTarget = "1.8"
@@ -48,5 +47,5 @@ task clean(type: Delete) {
 task("checkAll") {
     group "Verify"
     description "Runs all static checks on the build"
-    dependsOn "pmd", "detekt"
+    dependsOn "detekt"
 }
