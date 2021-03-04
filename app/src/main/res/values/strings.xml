@@ -61,6 +61,7 @@
     <string name="allow_call">Разрешить звонки</string>
     <string name="address">Адрес</string>
     <string name="apply">Применить</string>
+    <string name="read_more">Читать дальше</string>
 
     <!--BookReuse API Keys -->
     <string

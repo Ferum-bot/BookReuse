@@ -199,4 +199,25 @@
     <style name="DefaultStyleForSmallItemProfileImageView">
         <item name="civ_border_width">0dp</item>
     </style>
+
+    <style name="DefaultStyleForSmallReviewItemNicknameLabel" parent="DefaultStyleForSmallAdvertAuthorLabels">
+        <item name="android:textColor">@color/base_blue</item>
+        <item name="android:textSize">@dimen/small_review_item_nickname_text_size</item>
+    </style>
+
+    <style name="DefaultStyleForSmallReviewItemDescription" parent="DefaultStyleForTextView">
+        <item name="android:textSize">@dimen/small_review_item_description_text_size</item>
+        <item name="android:textColor">@color/light_gray</item>
+        <item name="android:minLines">5</item>
+        <item name="android:maxLines">5</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="DefaultStyleForSmallReviewItemReadAllTextView" parent="DefaultStyleForSmallReviewItemNicknameLabel">
+        <item name="android:text">@string/read_more</item>
+    </style>
+
+    <style name="DefaultStyleForSmallReviewItemNumberOfLikesOrDislikes" parent="DefaultStyleForTextView">
+        <item name="android:textSize">@dimen/small_review_item_like_or_dislike_text_size</item>
+    </style>
 </resources>

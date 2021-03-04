@@ -40,7 +40,155 @@
                 app:layout_constraintStart_toStartOf="@id/start_guideline"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:src="@tools:sample/avatars" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <TextView
+                android:id="@+id/nick_name_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="8dp"
+
+                style="@style/DefaultStyleForSmallReviewItemNicknameLabel"
+
+                app:layout_constraintTop_toTopOf="@id/profile_image_view"
+                app:layout_constraintStart_toEndOf="@id/profile_image_view"
+                app:layout_constraintBottom_toTopOf="@id/date_text_view"
+                tools:text="Матвей Попов"/>
+
+            <TextView
+                android:id="@+id/date_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                style="@style/DefaultStyleForSmallAdvertDateTextView"
+
+                app:layout_constraintTop_toBottomOf="@id/nick_name_label"
+                app:layout_constraintBottom_toBottomOf="@id/profile_image_view"
+                app:layout_constraintStart_toStartOf="@id/nick_name_label"
+                tools:text="1 июля 2020"/>
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/rating_flow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+
+                app:constraint_referenced_ids="first_star,second_star,third_star,forth_star,fives_star"
+                app:flow_wrapMode="none"
+                app:flow_horizontalAlign="end"
+                app:flow_horizontalStyle="packed"
+                app:flow_horizontalGap="6dp"
+
+                app:layout_constraintTop_toTopOf="@id/profile_image_view"
+                app:layout_constraintBottom_toBottomOf="@id/nick_name_label"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <ImageView
+                android:id="@+id/first_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:srcCompat="@drawable/ic_star__1_" />
+
+            <ImageView
+                android:id="@+id/second_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:srcCompat="@drawable/ic_star__1_" />
+
+            <ImageView
+                android:id="@+id/third_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:srcCompat="@drawable/ic_star__1_" />
+
+            <ImageView
+                android:id="@+id/forth_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:srcCompat="@drawable/ic_star__1_" />
+
+            <ImageView
+                android:id="@+id/fives_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:srcCompat="@drawable/ic_star__1_" />
+
+            <TextView
+                android:id="@+id/review_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                style="@style/DefaultStyleForSmallReviewItemDescription"
+
+                app:layout_constraintTop_toBottomOf="@id/profile_image_view"
+                app:layout_constraintStart_toStartOf="@id/start_guideline"
+                app:layout_constraintEnd_toEndOf="@id/end_guideline"
+                tools:text="Очень интересно, но ничего не понял. Очень интересно, но ничего не понял. Очень интересно, но ничего не понял. Очень интересно, но ничего не понял. Очень интересно, но ничего не понял. Очень интересно, но ничего не понял. Очень интересно, но ничего не понял."/>
+
+            <TextView
+                android:id="@+id/read_all_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                style="@style/DefaultStyleForSmallReviewItemReadAllTextView"
+
+                app:layout_constraintTop_toBottomOf="@id/review_description"
+                app:layout_constraintStart_toStartOf="@id/start_guideline"/>
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/likes_and_dislike_flow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+
+                app:constraint_referenced_ids="like_image_view,number_of_likes_text_view,dislike_image_view,number_of_dislikes_text_view"
+                app:flow_wrapMode="none"
+                app:flow_horizontalAlign="start"
+                app:flow_horizontalStyle="packed"
+                app:flow_horizontalGap="8dp"
+
+                app:layout_constraintStart_toStartOf="@id/start_guideline"
+                app:layout_constraintTop_toBottomOf="@id/read_all_text_view"/>
+
+            <ImageView
+                android:id="@+id/like_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:srcCompat="@drawable/ic_like" />
+
+            <ImageView
+                android:id="@+id/dislike_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:srcCompat="@drawable/ic_dislike"/>
+
+            <TextView
+                android:id="@+id/number_of_likes_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                style="@style/DefaultStyleForSmallReviewItemNumberOfLikesOrDislikes"
+
+                tools:text="143"/>
+
+            <TextView
+                android:id="@+id/number_of_dislikes_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                style="@style/DefaultStyleForSmallReviewItemNumberOfLikesOrDislikes"
+                tools:text="17"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </layout>
