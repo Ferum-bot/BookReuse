@@ -62,9 +62,12 @@
     <string name="address">Адрес</string>
     <string name="apply">Применить</string>
     <string name="read_more">Читать дальше</string>
+    <string name="recomendation">Рекомендации</string>
+    <string name="new_type">Новые</string>
 
     <!--BookReuse API Keys -->
     <string
         name="yandex_map_kit_api_key"
         tools:ignore="TypographyDashes">4c619afc-1121-4a93-9913-5e2cce4af954</string>
+    <string name="near_you">Рядом с вами</string>
 </resources>

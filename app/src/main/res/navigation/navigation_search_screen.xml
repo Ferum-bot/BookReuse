@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation_search_screen">
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation_search_screen"
+    app:startDestination="@id/searchScreenFragment">
 
+    <fragment
+        android:id="@+id/searchScreenFragment"
+        android:name="com.github.ferum_bot.bookreuse.ui.fragment.search.SearchScreenFragment"
+        android:label="SearchScreenFragment" />
 </navigation>

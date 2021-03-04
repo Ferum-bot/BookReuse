@@ -41,4 +41,6 @@
     <dimen name="small_review_item_nickname_text_size">15sp</dimen>
     <dimen name="small_review_item_description_text_size">14sp</dimen>
     <dimen name="small_review_item_like_or_dislike_text_size">15sp</dimen>
+    <dimen name="horizontal_review_list_label_text_size">20sp</dimen>
+    <dimen name="horizontal_advert_grid_types_text_view_text_size">16sp</dimen>
 </resources>

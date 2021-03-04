@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/navigation_messages_screen">
+    android:id="@+id/navigation_messages_screen"
+    app:startDestination="@id/anonimusUserMessagesScreenFragment">
 
+    <fragment
+        android:id="@+id/anonimusUserMessagesScreenFragment"
+        android:name="com.github.ferum_bot.bookreuse.ui.fragment.messages.AnonimusUserMessagesScreenFragment"
+        android:label="AnonimusUserMessagesScreenFragment" />
 </navigation>

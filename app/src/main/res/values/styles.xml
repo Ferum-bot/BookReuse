@@ -220,4 +220,14 @@
     <style name="DefaultStyleForSmallReviewItemNumberOfLikesOrDislikes" parent="DefaultStyleForTextView">
         <item name="android:textSize">@dimen/small_review_item_like_or_dislike_text_size</item>
     </style>
+
+    <style name="DefaultStyleForHorizontalReviewListLabel" parent="DefaultStyleForTextView">
+        <item name="android:textSize">@dimen/horizontal_review_list_label_text_size</item>
+    </style>
+
+    <style name="DefaultStyleForHorizontalLayoutWithTypesAdvertGridTextView" parent="DefaultStyleForTextView">
+        <item name="android:textColor">@color/base_gray</item>
+        <item name="android:textSize">@dimen/horizontal_advert_grid_types_text_view_text_size</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
 </resources>

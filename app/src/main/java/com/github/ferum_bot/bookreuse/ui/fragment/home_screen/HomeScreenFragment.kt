@@ -1,9 +1,8 @@
 package com.github.ferum_bot.bookreuse.ui.fragment.home_screen
 
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
 import com.github.ferum_bot.bookreuse.R
-import com.github.ferum_bot.bookreuse.databinding.FragmentHomeScreenContainerBinding
+import com.github.ferum_bot.bookreuse.databinding.FragmentHomeScreenMainBinding
 import com.github.ferum_bot.bookreuse.ui.fragment.base.BaseFragment
 import com.github.ferum_bot.bookreuse.ui.fragment.delegates.viewBinding
 
@@ -13,9 +12,9 @@ import com.github.ferum_bot.bookreuse.ui.fragment.delegates.viewBinding
  * Time: 21:47
  * Project: BookReuse
  */
-class HomeScreenFragment: BaseFragment(R.layout.fragment_home_screen_container) {
+class HomeScreenFragment: BaseFragment(R.layout.fragment_home_screen_main) {
 
-    private val binding by viewBinding { FragmentHomeScreenContainerBinding.bind(it) }
+    private val binding by viewBinding { FragmentHomeScreenMainBinding.bind(it) }
 
     override fun onStart() {
         super.onStart()

@@ -5,11 +5,15 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.github.ferum_bot.bookreuse.ui.fragment.about_application.AboutApplicationFragment
 import com.github.ferum_bot.bookreuse.ui.fragment.authentication.ChooseAddressRegistrationFragment
 import com.github.ferum_bot.bookreuse.ui.fragment.authentication.GeneralInformationFragment
+import com.github.ferum_bot.bookreuse.ui.fragment.home_screen.HomeScreenContainerFragment
 import com.github.ferum_bot.bookreuse.ui.fragment.home_screen.HomeScreenFragment
 import com.github.ferum_bot.bookreuse.ui.fragment.messages.AnonimusUserMessagesScreenFragment
+import com.github.ferum_bot.bookreuse.ui.fragment.messages.MessagesScreenContainerFragment
 import com.github.ferum_bot.bookreuse.ui.fragment.messages.MessagesScreenFragment
 import com.github.ferum_bot.bookreuse.ui.fragment.profile.AnonimusUserProfileScreenFragment
+import com.github.ferum_bot.bookreuse.ui.fragment.profile.ProfileScreenContainerFragment
 import com.github.ferum_bot.bookreuse.ui.fragment.profile.ProfileScreenFragment
+import com.github.ferum_bot.bookreuse.ui.fragment.search.SearchScreenContainerFragment
 import com.github.ferum_bot.bookreuse.ui.fragment.search.SearchScreenFragment
 import com.github.ferum_bot.bookreuse.ui.interfaces.AuthorizationUtil
 
@@ -33,26 +37,16 @@ class MainScreenPagerAdapter(
     override fun createFragment(position: Int): Fragment {
         return when(position) {
             POSITION_OF_HOME_FRAGMENT -> {
-                ChooseAddressRegistrationFragment()
+               HomeScreenContainerFragment()
             }
             POSITION_OF_SEARCH_FRAGMENT -> {
-                GeneralInformationFragment()
+                SearchScreenContainerFragment()
             }
             POSITION_OF_MESSAGES_FRAGMENT -> {
-                if (isUserAuthorized) {
-                    MessagesScreenFragment()
-                }
-                else {
-                    AnonimusUserMessagesScreenFragment()
-                }
+                MessagesScreenContainerFragment()
             }
             POSITION_OF_PROFILE_FRAGMENT -> {
-                if (isUserAuthorized) {
-                    ProfileScreenFragment()
-                }
-                else {
-                    AnonimusUserProfileScreenFragment()
-                }
+                ProfileScreenContainerFragment()
             }
             else -> {
                 throw IllegalArgumentException("Unknown position to create fragment: $position")

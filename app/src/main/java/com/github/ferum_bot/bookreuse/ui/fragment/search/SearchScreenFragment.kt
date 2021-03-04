@@ -11,7 +11,7 @@ import com.github.ferum_bot.bookreuse.ui.fragment.delegates.viewBinding
  * Time: 23:05
  * Project: BookReuse
  */
-class SearchScreenFragment: Fragment(R.layout.fragment_search_screen_container) {
+class SearchScreenFragment: Fragment(R.layout.fragment_search_screen_main) {
 
     private val binding by viewBinding { FragmentSearchScreenContainerBinding.bind(it) }
 
