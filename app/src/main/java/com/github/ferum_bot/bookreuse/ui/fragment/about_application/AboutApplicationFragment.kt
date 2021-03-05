@@ -12,7 +12,7 @@ import android.view.View
 import androidx.core.content.ContextCompat
 import com.github.ferum_bot.bookreuse.R
 import com.github.ferum_bot.bookreuse.core.extensions.copyToClipboard
-import com.github.ferum_bot.bookreuse.core.models.TelegramUtils
+import com.github.ferum_bot.bookreuse.core.TelegramUtils
 import com.github.ferum_bot.bookreuse.databinding.FragmentAboutApplicationBinding
 import com.github.ferum_bot.bookreuse.ui.fragment.base.BaseFragment
 import com.github.ferum_bot.bookreuse.ui.fragment.delegates.viewBinding

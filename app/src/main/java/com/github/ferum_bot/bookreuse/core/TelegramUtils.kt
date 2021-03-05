@@ -1,4 +1,4 @@
-package com.github.ferum_bot.bookreuse.core.models
+package com.github.ferum_bot.bookreuse.core
 
 import android.net.Uri
 import com.github.ferum_bot.bookreuse.network.NetworkUtils

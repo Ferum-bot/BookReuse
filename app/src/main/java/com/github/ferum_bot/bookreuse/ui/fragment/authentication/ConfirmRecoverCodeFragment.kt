@@ -8,11 +8,8 @@ import android.widget.FrameLayout
 import androidx.fragment.app.viewModels
 import com.github.ferum_bot.bookreuse.R
 import com.github.ferum_bot.bookreuse.core.extensions.convertDpToPixels
-import com.github.ferum_bot.bookreuse.core.models.TimeFormatter
+import com.github.ferum_bot.bookreuse.core.TimeFormatter
 import com.github.ferum_bot.bookreuse.databinding.FragmentConfirmRecoverCodeBinding
-import com.github.ferum_bot.bookreuse.di.components.MainActivityComponent
-import com.github.ferum_bot.bookreuse.ui.activity.MainActivity
-import com.github.ferum_bot.bookreuse.ui.fragment.base.BaseFragment
 import com.github.ferum_bot.bookreuse.ui.fragment.base.MainActivityBaseFragment
 import com.github.ferum_bot.bookreuse.ui.fragment.delegates.viewBinding
 import com.github.ferum_bot.bookreuse.viewmodels.authentication.ConfirmRecoverCodeViewModel

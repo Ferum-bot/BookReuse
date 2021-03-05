@@ -72,6 +72,9 @@ dependencies {
 
     implementation libs.circleImageView
 
+    implementation libs.adapterDelegates
+    implementation libs.adapterDelegatesViewBinding
+
     implementation project(':bottom-navigation-view')
     implementation project(':tool-bar-view')
 

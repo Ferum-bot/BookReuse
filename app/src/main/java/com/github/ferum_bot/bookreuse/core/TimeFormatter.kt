@@ -1,6 +1,4 @@
-package com.github.ferum_bot.bookreuse.core.models
-
-import java.time.format.DateTimeFormatter
+package com.github.ferum_bot.bookreuse.core
 
 /**
  * Created by Matvey Popov.
