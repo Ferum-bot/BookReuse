@@ -15,7 +15,7 @@
     <string name="anonimus_user">Анонимный пользователь</string>
     <string name="enter_or_registration">Вход или регистрация</string>
     <string name="create">Создать</string>
-    <string name="announcement">Объявление</string>
+    <string name="advert">Объявление</string>
     <string name="review">Рецензия</string>
     <string name="about_application">О приложении</string>
     <string name="about_application_description">Приложение написано для легкого поиска книг рядом. Исходный код приложения находится в открытом доступе.</string>
@@ -64,10 +64,19 @@
     <string name="read_more">Читать дальше</string>
     <string name="recomendation">Рекомендации</string>
     <string name="new_type">Новые</string>
+    <string name="near_you">Рядом с вами</string>
+    <string name="edit">Edit</string>
+    <string name="save">Save</string>
+    <string name="to_write">Написать</string>
+    <string name="information_about_book">Информация о книге:</string>
+    <string name="author">Автор:</string>
+    <string name="title">Название:</string>
+    <string name="description">Описание:</string>
+    <string name="geo_position">Геопозиция:</string>
+    <string name="linked_review">Прикрепленная рецензия:</string>
 
     <!--BookReuse API Keys -->
     <string
         name="yandex_map_kit_api_key"
         tools:ignore="TypographyDashes">4c619afc-1121-4a93-9913-5e2cce4af954</string>
-    <string name="near_you">Рядом с вами</string>
 </resources>

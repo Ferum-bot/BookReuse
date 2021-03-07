@@ -36,6 +36,15 @@
         <item name="android:textSize">@dimen/authorization_labels_description_text_size</item>
     </style>
 
+    <style name="DefaultStyleForStuffLabels" parent="DefaultStyleForAuthorizationDescriptionLabels">
+        <item name="android:textSize">@dimen/stuff_labels_text_size</item>
+        <item name="android:textColor">@color/base_white</item>
+    </style>
+
+    <style name="DefaultStyleForStuffDescriptions" parent="DefaultStyleForStuffLabels">
+        <item name="android:textSize">@dimen/bottom_sheet_text_size</item>
+    </style>
+
     <style name="DefaultStyleForBottomSheetTextViews" parent="DefaultStyleForMiddleTextView">
         <item name="android:textSize">@dimen/bottom_sheet_text_size</item>
         <item name="android:layout_marginStart">16dp</item>
@@ -171,6 +180,11 @@
         <item name="android:layout_margin">4dp</item>
     </style>
 
+    <style name="DefaultStyleForCardView" parent="DefaultStyleForSmallCardView">
+        <item name="android:layout_margin">0dp</item>
+        <item name="cardCornerRadius">@dimen/profile_card_view_radius</item>
+    </style>
+
     <style name="DefaultStyleForImageView">
         <item name="android:scaleType">centerCrop</item>
     </style>
@@ -196,6 +210,10 @@
         <item name="android:textColor">@color/base_gray</item>
     </style>
 
+    <style name="DefaultStyleForStuffDateTextView" parent="DefaultStyleForSmallAdvertDateTextView">
+        <item name="android:textSize">@dimen/stuff_date_text_size</item>
+    </style>
+
     <style name="DefaultStyleForSmallItemProfileImageView">
         <item name="civ_border_width">0dp</item>
     </style>
@@ -203,6 +221,10 @@
     <style name="DefaultStyleForSmallReviewItemNicknameLabel" parent="DefaultStyleForSmallAdvertAuthorLabels">
         <item name="android:textColor">@color/base_blue</item>
         <item name="android:textSize">@dimen/small_review_item_nickname_text_size</item>
+    </style>
+
+    <style name="DefaultStyleForNickNameLabel" parent="DefaultStyleForSmallReviewItemNicknameLabel">
+        <item name="android:textSize">@dimen/nickname_label_text_size</item>
     </style>
 
     <style name="DefaultStyleForSmallReviewItemDescription" parent="DefaultStyleForTextView">

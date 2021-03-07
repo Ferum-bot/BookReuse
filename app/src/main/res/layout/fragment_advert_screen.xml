@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="true"
+        android:fitsSystemWindows="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main_view_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+
+            <Toolbar
+                android:id="@+id/tool_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:title="@string/advert"
+                android:navigationIcon="@drawable/ic_baseline_arrow_white_ios_24"
+
+                style="@style/DefaultStyleForToolBar"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/start_guideline"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="8dp"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/end_guideline"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="8dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profile_card_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="8dp"
+
+                style="@style/DefaultStyleForCardView"
+
+                app:layout_constraintTop_toBottomOf="@id/tool_bar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image_view"
+                        android:layout_width="@dimen/profile_card_view_profile_image_size"
+                        android:layout_height="@dimen/profile_card_view_profile_image_size"
+
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:src="@tools:sample/avatars" />
+
+                    <TextView
+                        android:id="@+id/nick_name_label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+
+                        style="@style/DefaultStyleForNickNameLabel"
+
+                        app:layout_constraintTop_toTopOf="@id/profile_image_view"
+                        app:layout_constraintStart_toEndOf="@id/profile_image_view"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/date_text_view"
+                        tools:text="Матвей Попов"/>
+
+                    <TextView
+                        android:id="@+id/date_text_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        style="@style/DefaultStyleForStuffDateTextView"
+
+                        app:layout_constraintStart_toStartOf="@id/nick_name_label"
+                        app:layout_constraintTop_toBottomOf="@id/nick_name_label"
+                        app:layout_constraintBottom_toBottomOf="@id/profile_image_view"
+                        app:layout_constraintEnd_toEndOf="@id/nick_name_label"
+                        tools:text="1 июля 2020"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/send_message_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/to_write"
+
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginBottom="8dp"
+
+                        style="@style/DefaultStyleForBigButtons"
+
+                        app:layout_constraintTop_toBottomOf="@id/profile_image_view"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/information_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/information_about_book"
+
+                android:layout_marginTop="8dp"
+
+                style="@style/DefaultStyleForStuffLabels"
+
+                app:layout_constraintTop_toBottomOf="@id/profile_card_view"
+                app:layout_constraintStart_toStartOf="@id/start_guideline"
+                app:layout_constraintEnd_toEndOf="@id/end_guideline"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/author_card_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="8dp"
+
+                style="@style/DefaultStyleForCardView"
+
+                app:layout_constraintTop_toBottomOf="@id/information_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/author_label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/author"
+
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="4dp"
+
+                        style="@style/DefaultStyleForStuffDescriptions"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/author_text_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="8dp"
+
+                        style="@style/DefaultStyleForStuffDescriptions"
+
+                        app:layout_constraintTop_toBottomOf="@id/author_label"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        tools:text="Л. Н. Толстой и еще кто-то фиг знает кто короче"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/title_card_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="8dp"
+
+                style="@style/DefaultStyleForCardView"
+
+                app:layout_constraintTop_toBottomOf="@id/author_card_view"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/title_label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title"
+
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="4dp"
+
+                        style="@style/DefaultStyleForStuffDescriptions"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/title_text_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="8dp"
+
+                        style="@style/DefaultStyleForStuffDescriptions"
+
+                        app:layout_constraintTop_toBottomOf="@id/title_label"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        tools:text="Анна Карина или как её блин звали а привет всем!"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/description_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/description"
+
+                android:layout_marginTop="8dp"
+
+                style="@style/DefaultStyleForStuffLabels"
+
+                app:layout_constraintTop_toBottomOf="@id/title_card_view"
+                app:layout_constraintStart_toStartOf="@id/start_guideline"
+                app:layout_constraintEnd_toEndOf="@id/end_guideline"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/description_card_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="8dp"
+
+                style="@style/DefaultStyleForCardView"
+
+                app:layout_constraintTop_toBottomOf="@id/description_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/description_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+
+                    style="@style/DefaultStyleForStuffDescriptions"
+
+                    tools:text="Книга новая. Отдаю за ненадобностью. Берите пока есть время!"/>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/geo_position_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/geo_position"
+
+                android:layout_marginTop="8dp"
+
+                style="@style/DefaultStyleForStuffLabels"
+
+                app:layout_constraintTop_toBottomOf="@id/description_card_view"
+                app:layout_constraintStart_toStartOf="@id/start_guideline"
+                app:layout_constraintEnd_toEndOf="@id/end_guideline"/>
+
+            <com.yandex.mapkit.mapview.MapView
+                android:id="@+id/map_view"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+
+                android:layout_marginTop="8dp"
+
+                app:layout_constraintTop_toBottomOf="@id/geo_position_label"
+                app:layout_constraintStart_toStartOf="@id/start_guideline"
+                app:layout_constraintEnd_toEndOf="@id/end_guideline"/>
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/linked_review_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:constraint_referenced_ids="linked_review_label,linked_review_item"/>
+
+            <TextView
+                android:id="@+id/linked_review_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/linked_review"
+
+                android:layout_marginTop="8dp"
+
+                style="@style/DefaultStyleForStuffLabels"
+
+                app:layout_constraintStart_toStartOf="@id/start_guideline"
+                app:layout_constraintEnd_toEndOf="@id/end_guideline"
+                app:layout_constraintTop_toBottomOf="@id/map_view"/>
+
+            <include
+                android:id="@+id/linked_review_item"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="8dp"
+
+                app:layout_constraintTop_toBottomOf="@id/linked_review_label"
+                app:layout_constraintStart_toStartOf="@id/start_guideline"
+                app:layout_constraintEnd_toEndOf="@id/end_guideline"
+                layout="@layout/small_review_item" />
+
+            <include
+                android:id="@+id/horizontal_advert_list"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+
+                android:layout_marginTop="8dp"
+
+                app:layout_constraintTop_toBottomOf="@id/linked_review_item"
+                app:layout_constraintStart_toStartOf="@id/start_guideline"
+                app:layout_constraintEnd_toEndOf="@id/end_guideline"
+                layout="@layout/horizontal_advert_list"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
